@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils"
 export interface TextareaProps
   extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   // 향후 커스텀 props 확장을 위한 인터페이스
+  variant?: 'default' | 'ghost' | 'outline'
 }
 
 const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(

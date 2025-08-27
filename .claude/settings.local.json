@@ -14,7 +14,10 @@
       "Bash(npm run typecheck:*)",
       "Bash(npm run build:*)",
       "Bash(git remote add:*)",
-      "Bash(git branch:*)"
+      "Bash(git branch:*)",
+      "Bash(npm run dev:*)",
+      "Bash(npx next dev:*)",
+      "Bash(taskkill:*)"
     ],
     "deny": [],
     "ask": [],

@@ -34,31 +34,27 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ### 필수 개발 명령어
 ```bash
-# 프로젝트 초기 설정 (Dear_Q 폴더에서)
-npx create-next-app@latest . --typescript --tailwind --eslint --app --no-src --import-alias "@/*"
-
 # 의존성 설치
-npm install --legacy-peer-deps  # React 19 호환성
-npm install @prisma/client prisma next-auth @auth/prisma-adapter
-npm install @radix-ui/react-slot lucide-react class-variance-authority clsx tailwind-merge
-npm install zod react-hook-form @hookform/resolvers
+npm install --legacy-peer-deps  # React 19 호환성 위한 필수 플래그
 
-# 개발 서버
+# 개발 서버 (Turbopack 사용)
 npm run dev                     # 개발 서버 시작 (http://localhost:3000)
-npm run build                   # 프로덕션 빌드
+npm run build                   # 프로덕션 빌드 (Turbopack 사용)
 npm run start                   # 프로덕션 서버 실행
 
-# 데이터베이스 (Prisma 초기화 후)
-npx prisma init                # Prisma 초기 설정
-npx prisma generate            # Prisma 클라이언트 생성
-npx prisma db push            # 스키마를 DB에 반영
+# 데이터베이스 관리 (Prisma)
+npx prisma generate            # Prisma 클라이언트 생성 (스키마 변경 후 필수)
+npx prisma db push            # 스키마를 Neon PostgreSQL에 반영
 npx prisma studio             # 데이터베이스 GUI (http://localhost:5555)
-npx prisma db seed            # 초기 데이터 시딩
+npx prisma db seed            # 초기 데이터 시딩 (질문 뱅크 등)
 
-# 품질 관리
+# 코드 품질 관리
 npm run lint                  # ESLint 검사
 npm run typecheck             # TypeScript 타입 체크 (tsc --noEmit)
-npm test                      # 테스트 실행 (추후 구현 예정)
+
+# 단일 테스트 실행 예시 (향후 구현)
+npm test -- --testNamePattern="TodayPage"
+npm run test:watch           # 워치 모드 테스트 실행
 ```
 
 ### 환경 설정
@@ -362,20 +358,27 @@ main              # 프로덕션 배포
 
 ## Important Files to Review
 
-### 기존 자산 활용
-- `maeum-baedal/components/ui/`: shadcn/ui 컴포넌트 전체 복사해서 재사용
-- `maeum-baedal/app/home/page.tsx`: TodayPage 구조 참고
-- `maeum-baedal/components/mobile-nav.tsx`: 네비게이션 구조 참고
-- `maeum-baedal/lib/dummy-data.ts`: 초기 질문 데이터 활용
+### 기존 구현된 파일들
+- `prisma/schema.prisma`: 6-Table + NextAuth 스키마 완성
+- `app/today/page.tsx`: 핵심 페이지 기본 구조 구현 
+- `components/features/today/`: Today 페이지 전용 컴포넌트들
+  - `TodayHeader.tsx`: 헤더 + 카운트다운
+  - `QuestionCard.tsx`: 질문 카드 + 교체 기능
+  - `AnswerForm.tsx`: 답변 작성 폼
+  - `GateStatus.tsx`: 게이트 상태 표시기
+- `components/ui/`: shadcn/ui 기본 컴포넌트 (button, card, input, textarea)
 
-### 핵심 구현 파일 (생성 필요)
-- `prisma/schema.prisma`: 6-Table 스키마 정의
+### 아직 구현 필요한 핵심 파일들
 - `lib/auth.ts`: NextAuth 카카오 OAuth 설정
 - `lib/service-day.ts`: 05시 서비스 데이 로직 구현
 - `lib/gate.ts`: 게이트 공개 시스템 로직
-- `app/today/page.tsx`: 핵심 페이지 구현
-- `app/api/today/route.ts`: 오늘 과제 API
-- `app/api/answer/route.ts`: 답변 제출 API
+- `app/api/today/route.ts`: 오늘 과제 API (GET)
+- `app/api/answer/route.ts`: 답변 제출 API (POST)
+- `app/api/today/swap/route.ts`: 질문 교체 API (POST)
+- `app/(auth)/login/page.tsx`: 카카오 로그인 페이지
+- `app/onboarding/page.tsx`: 초대코드 쌍 연결
+- `app/conversation/[id]/page.tsx`: 대화 상세 보기
+- `app/history/page.tsx`: 대화 히스토리
 
 ## Project Standards Summary
 
@@ -388,3 +391,121 @@ main              # 프로덕션 배포
 - ✅ **게이트 공개 + 05시 서비스 데이**로 차별화
 
 모든 개발 작업은 이 가이드를 기준으로 진행하며, 운영 효율성과 사용자 경험을 최우선으로 합니다.
+
+## Code Architecture Patterns
+
+### Component Structure
+```typescript
+// Today 페이지 컴포넌트 구조 예시
+'use client'                    // Client 컴포넌트로 선언
+import { useState } from "react"
+
+// 타입 정의는 파일 상단에
+type GateStatusType = 'waiting' | 'waiting_partner' | 'need_my_answer' | 'opened'
+
+interface TodayData {
+  question: string
+  myAnswer: string
+  gateStatus: GateStatusType
+  // ...
+}
+
+// 메인 컴포넌트
+export default function TodayPage() {
+  // 상태 관리
+  const [todayData, setTodayData] = useState<TodayData>({...})
+  
+  // 이벤트 핸들러들
+  const handleSubmitAnswer = async (answer: string) => { /* API 호출 */ }
+  
+  // 렌더링
+  return (
+    <div className="min-h-screen bg-gray-50 p-4">
+      <div className="max-w-md mx-auto space-y-4">
+        {/* 컴포넌트 조합 */}
+      </div>
+    </div>
+  )
+}
+```
+
+### API Route Pattern
+```typescript
+// app/api/today/route.ts 패턴
+import { NextRequest, NextResponse } from 'next/server'
+import { getServerSession } from 'next-auth'
+import { prisma } from '@/lib/prisma'
+
+export async function GET(request: NextRequest) {
+  try {
+    // 1. 인증 확인
+    const session = await getServerSession()
+    if (!session?.user) {
+      return NextResponse.json({ error: '인증이 필요합니다' }, { status: 401 })
+    }
+
+    // 2. 비즈니스 로직
+    const assignment = await getOrCreateTodayAssignment(session.user.id)
+    
+    // 3. 응답 반환
+    return NextResponse.json({ assignment, gateStatus: '...' })
+  } catch (error) {
+    console.error('Today API error:', error)
+    return NextResponse.json({ error: '서버 오류가 발생했습니다' }, { status: 500 })
+  }
+}
+```
+
+### Database Query Patterns
+```typescript
+// Prisma 쿼리 패턴 (lib/queries.ts)
+export async function getOrCreateTodayAssignment(pairId: string) {
+  const serviceDay = getServiceDay() // "2025-08-27"
+  
+  // 트랜잭션으로 안전한 생성/조회
+  return await prisma.$transaction(async (tx) => {
+    const existing = await tx.assignment.findFirst({
+      where: { pairId, serviceDay, status: 'active' },
+      include: { question: true, answers: true }
+    })
+    
+    if (existing) return existing
+    
+    // 새 Assignment 생성
+    const randomQuestion = await tx.question.findFirst({
+      where: { isActive: true },
+      orderBy: { totalUsed: 'asc' } // 사용 빈도 낮은 것 우선
+    })
+    
+    return tx.assignment.create({
+      data: { pairId, serviceDay, questionId: randomQuestion.id },
+      include: { question: true }
+    })
+  })
+}
+```
+
+## Common Patterns & Best Practices
+
+### Error Handling
+- API에서는 항상 try-catch로 에러 처리
+- 사용자 친화적 한국어 에러 메시지 제공
+- 개발자 디버깅용 console.error 포함
+- HTTP 상태 코드 적절히 사용 (401, 404, 500 등)
+
+### State Management
+- 복잡한 상태는 useReducer 고려
+- 서버 상태는 React Query/SWR 사용 검토 (후순위)
+- localStorage 임시 저장 (답변 작성 중 데이터 보호)
+
+### Accessibility
+- 모든 인터랙티브 요소는 44px 이상 터치 타겟
+- 적절한 ARIA 레이블 및 role 속성
+- 키보드 네비게이션 지원 (tab, enter, space)
+- 색상 대비 4.5:1 이상 유지
+
+### Mobile-First Design
+- Tailwind CSS 모바일 퍼스트 접근
+- 최대 너비 max-w-md (448px) 기준
+- Touch-friendly 인터페이스
+- 세로 모드 최적화 우선

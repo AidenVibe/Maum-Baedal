@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils"
 export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
   // 향후 커스텀 props 확장을 위한 인터페이스
+  variant?: 'default' | 'ghost' | 'outline'
 }
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
