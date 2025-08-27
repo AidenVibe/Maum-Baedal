@@ -90,7 +90,7 @@ export default function TodayPage() {
   const hasAnswered = todayData.myAnswer.trim().length > 0
 
   return (
-    <div className="min-h-screen bg-gray-50 p-4">
+    <div className="min-h-full bg-gray-50 p-4">
       <div className="max-w-md mx-auto space-y-4">
         
         <TodayHeader 
@@ -119,7 +119,7 @@ export default function TodayPage() {
           onViewConversation={handleViewConversation}
         />
 
-        {/* 하단 네비게이션 힌트 */}
+        {/* 하단 여백 - 네비게이션으로 인한 내용 가려짐 방지 */}
         <div className="text-center text-sm text-gray-500 py-4">
           오늘의 대화가 완료되면 기록에서 다시 볼 수 있어요
         </div>

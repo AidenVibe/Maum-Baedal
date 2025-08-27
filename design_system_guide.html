@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마음배달 디자인 시스템 가이드</title>
+    <style>
+        :root {
+            /* Brand Primary (Orange Family) */
+            --color-primary-600: #EA580C;
+            --color-primary-500: #F97316;
+            --color-primary-400: #FB923C;
+            --color-primary-100: #FED7AA;
+            
+            /* Secondary (Lavender/Violet) */
+            --color-secondary-600: #7C5CE4;
+            --color-secondary-100: #EFEAFF;
+            
+            /* Neutrals (Slate/Gray) */
+            --gray-900: #0F172A;
+            --gray-700: #334155;
+            --gray-300: #CBD5E1;
+            --gray-50: #F8FAFC;
+            
+            /* State Colors */
+            --success: #22C55E;
+            --warning: #F59E0B;
+            --error: #EF4444;
+            --info: #3B82F6;
+            
+            /* Typography */
+            --font-base: 16px;
+            --line-height: 1.6;
+        }
+
+        [data-theme="dark"] {
+            --bg-primary: #0B0F13;
+            --text-primary: #E5E7EB;
+            --bg-card: #1F2937;
+            --header-text: #F3F4F6; /* 다크모드 헤더용 밝은 색상 */
+        }
+
+        [data-theme="light"] {
+            --bg-primary: #FFFFFF;
+            --text-primary: var(--gray-900);
+            --bg-card: var(--gray-50);
+            --header-text: var(--color-primary-600); /* 라이트모드 헤더는 기본 브랜드 색상 */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: var(--font-base);
+            line-height: var(--line-height);
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 32px 0;
+            border-bottom: 1px solid var(--gray-300);
+        }
+
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 12px 18px;
+            background: var(--color-primary-600);
+            color: white;
+            border: none;
+            border-radius: 16px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            z-index: 100;
+            min-height: 48px;
+            font-size: 16px;
+        }
+
+        .theme-toggle:active {
+            transform: scale(0.98);
+            background: #D97706;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: var(--header-text);
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin: 32px 0 16px;
+            color: var(--header-text);
+        }
+
+        h3 {
+            font-size: 20px;
+            margin: 24px 0 12px;
+            color: var(--text-primary);
+        }
+
+        .section {
+            margin-bottom: 48px;
+        }
+
+        .grid {
+            display: grid;
+            gap: 16px;
+            margin: 24px 0;
+        }
+
+        .grid-2 { grid-template-columns: 1fr 1fr; }
+        .grid-3 { grid-template-columns: repeat(3, 1fr); }
+        .grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+        .card {
+            background: var(--bg-card);
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            transition: all 0.2s ease;
+        }
+
+        .card:active {
+            transform: scale(0.99);
+            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+        }
+
+        /* Color Palette */
+        .color-swatch {
+            height: 60px;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: transform 0.15s ease;
+            position: relative;
+        }
+
+        .color-swatch:active {
+            transform: scale(0.95);
+        }
+
+        .color-swatch::after {
+            content: '탭하여 복사';
+            position: absolute;
+            bottom: -24px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 11px;
+            opacity: 0.6;
+            font-weight: 400;
+        }
+
+        .primary-600 { background-color: var(--color-primary-600); }
+        .primary-500 { background-color: var(--color-primary-500); }
+        .primary-400 { background-color: var(--color-primary-400); }
+        .primary-100 { background-color: var(--color-primary-100); color: var(--gray-700); }
+        .secondary-600 { background-color: var(--color-secondary-600); }
+        .secondary-100 { background-color: var(--color-secondary-100); color: var(--gray-700); }
+        .success { background-color: var(--success); }
+        .warning { background-color: var(--warning); }
+        .error { background-color: var(--error); }
+        .info { background-color: var(--info); }
+
+        /* Buttons */
+        .btn {
+            padding: 16px 24px;
+            border-radius: 12px;
+            border: none;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            min-height: 48px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 16px;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .btn-primary {
+            background: var(--color-primary-600);
+            color: white;
+        }
+
+        .btn-primary:active {
+            background: #D97706;
+            transform: scale(0.98);
+        }
+
+        .btn-primary:focus {
+            outline: 3px solid var(--color-secondary-600);
+            outline-offset: 2px;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--color-primary-600);
+            border: 2px solid var(--color-primary-600);
+        }
+
+        .btn-secondary:active {
+            background: var(--color-primary-100);
+            transform: scale(0.98);
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: var(--color-primary-600);
+        }
+
+        .btn-ghost:active {
+            background: var(--color-primary-100);
+            transform: scale(0.98);
+        }
+
+        /* Chips */
+        .chip {
+            padding: 12px 20px;
+            border-radius: 24px;
+            border: 2px solid var(--gray-300);
+            background: white;
+            color: var(--gray-700);
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            min-height: 44px;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .chip.active {
+            background: var(--color-secondary-100);
+            color: var(--color-secondary-600);
+            border-color: var(--color-secondary-600);
+        }
+
+        .chip:active {
+            background: var(--gray-100);
+            transform: scale(0.96);
+        }
+
+        .chip.active:active {
+            background: var(--color-secondary-200);
+            transform: scale(0.96);
+        }
+
+        /* Typography Examples */
+        .typography-demo h1 { font-size: 32px; margin-bottom: 8px; }
+        .typography-demo h2 { font-size: 24px; margin-bottom: 8px; }
+        .typography-demo h3 { font-size: 20px; margin-bottom: 8px; }
+        .typography-demo p { font-size: 16px; margin-bottom: 8px; }
+        .typography-demo .caption { font-size: 14px; color: var(--gray-700); }
+
+        /* Question Card Demo */
+        .question-card {
+            background: var(--color-primary-100);
+            color: var(--color-primary-600);
+            border: 2px solid var(--color-primary-400);
+            padding: 32px;
+            border-radius: 16px;
+            text-align: center;
+            margin: 24px 0;
+        }
+
+        .question-card h3 {
+            color: white;
+            margin-bottom: 16px;
+        }
+
+        .answer-area {
+            background: white;
+            padding: 16px;
+            border-radius: 12px;
+            margin-top: 16px;
+            min-height: 120px;
+            width: 100%;
+            color: var(--gray-700);
+            border: 2px solid var(--gray-300);
+            transition: all 0.2s ease;
+            font-size: 16px;
+            line-height: 1.5;
+            resize: none;
+            -webkit-appearance: none;
+        }
+
+        .answer-area:focus {
+            outline: none;
+            border-color: var(--color-primary-600);
+            box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.1);
+        }
+
+        /* State Demos */
+        .blurred-demo {
+            filter: blur(12px);
+            opacity: 0.7;
+            transition: all 0.25s ease;
+        }
+
+        .blurred-demo.revealed {
+            filter: blur(0px);
+            opacity: 1;
+        }
+
+        /* Animation */
+        .celebration {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: var(--color-primary-500);
+            animation: confetti-fall 0.6s ease-out forwards;
+        }
+
+        @keyframes confetti-fall {
+            0% {
+                transform: translateY(-100px) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(200px) rotate(180deg);
+                opacity: 0;
+            }
+        }
+
+        /* Responsive - 모바일 최적화 */
+        @media (max-width: 768px) {
+            .grid-4 { grid-template-columns: repeat(2, 1fr); }
+            .grid-3 { grid-template-columns: 1fr; }
+            .grid-2 { grid-template-columns: 1fr; }
+            .container { 
+                padding: 16px; 
+                max-width: 100%;
+            }
+            
+            .card {
+                padding: 16px;
+            }
+            
+            h1 { font-size: 28px; }
+            h2 { font-size: 22px; }
+            
+            .btn {
+                padding: 16px 20px;
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .demo-controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .demo-controls .btn {
+                margin-bottom: 8px;
+            }
+            
+            .theme-toggle {
+                top: 16px;
+                right: 16px;
+                padding: 12px 16px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 12px;
+            }
+            
+            .grid-2 { 
+                grid-template-columns: 1fr; 
+                gap: 12px;
+            }
+            
+            .card {
+                padding: 12px;
+            }
+            
+            h1 { font-size: 24px; }
+            h2 { font-size: 20px; }
+        }
+
+        .interactive-section {
+            background: var(--bg-card);
+            padding: 24px;
+            border-radius: 16px;
+            margin: 24px 0;
+        }
+
+        .demo-controls {
+            display: flex;
+            gap: 12px;
+            margin: 16px 0;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body data-theme="light">
+    <button class="theme-toggle" onclick="toggleTheme()">🌙 다크모드</button>
+    
+    <div class="container">
+        <header class="header">
+            <h1>💝 마음배달 디자인 시스템</h1>
+            <p>매일 하나의 질문으로 가족의 마음을 배달합니다</p>
+        </header>
+
+        <!-- Brand Identity -->
+        <section class="section">
+            <h2>A. 브랜드 톤 & 매너</h2>
+            <div class="card">
+                <h3>핵심 가치</h3>
+                <p><strong>Warm & Simple & Assuring</strong></p>
+                <p>카카오 로그인으로 앱 설치 없이 즉시 시작하고, 라벨 기반으로 가족과 자연스럽게 연결</p>
+                <div style="margin-top: 16px; padding: 16px; background: var(--color-primary-100); border-radius: 8px; border: 1px solid var(--color-primary-400);">
+                    <p style="color: var(--color-primary-600); font-weight: 500;">
+                        "누구에게 마음을 전할까요?" 💝
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Color System -->
+        <section class="section">
+            <h2>B. 컬러 시스템</h2>
+            
+            <h3>Primary Colors (Orange Family)</h3>
+            <div class="grid grid-4">
+                <div class="card">
+                    <div class="color-swatch primary-600" onclick="copyColor('#EA580C')">#EA580C</div>
+                    <p><strong>Primary 600</strong><br>핵심 액션/하이라이트</p>
+                </div>
+                <div class="card">
+                    <div class="color-swatch primary-500" onclick="copyColor('#F97316')">#F97316</div>
+                    <p><strong>Primary 500</strong><br>기본 주황</p>
+                </div>
+                <div class="card">
+                    <div class="color-swatch primary-400" onclick="copyColor('#FB923C')">#FB923C</div>
+                    <p><strong>Primary 400</strong><br>밝은 주황</p>
+                </div>
+                <div class="card">
+                    <div class="color-swatch primary-100" onclick="copyColor('#FED7AA')">#FED7AA</div>
+                    <p><strong>Primary 100</strong><br>배경용 연한 주황</p>
+                </div>
+            </div>
+            
+            <div style="background: var(--color-primary-100); border: 1px solid var(--color-primary-400); padding: 16px; border-radius: 8px; margin-top: 16px;">
+                <p style="color: var(--color-primary-600); font-size: 14px;">
+                    <strong>🎨 색상 사용 가이드:</strong> 쨍한 색상(500, 600)은 배경에 사용 금지. 눈의 피로를 방지하기 위해 배경에는 Primary 100 등 연한 색상만 사용하세요.
+                </p>
+            </div>
+
+            <h3>Secondary Colors (Lavender/Violet)</h3>
+            <div class="grid grid-2">
+                <div class="card">
+                    <div class="color-swatch secondary-600" onclick="copyColor('#7C5CE4')">#7C5CE4</div>
+                    <p><strong>Secondary 600</strong><br>보조 CTA, 칩/탭 포커스</p>
+                </div>
+                <div class="card">
+                    <div class="color-swatch secondary-100" onclick="copyColor('#EFEAFF')">#EFEAFF</div>
+                    <p><strong>Secondary 100</strong></p>
+                </div>
+            </div>
+
+            <h3>State Colors</h3>
+            <div class="grid grid-4">
+                <div class="card">
+                    <div class="color-swatch success" onclick="copyColor('#22C55E')">#22C55E</div>
+                    <p><strong>Success</strong></p>
+                </div>
+                <div class="card">
+                    <div class="color-swatch warning" onclick="copyColor('#F59E0B')">#F59E0B</div>
+                    <p><strong>Warning</strong></p>
+                </div>
+                <div class="card">
+                    <div class="color-swatch error" onclick="copyColor('#EF4444')">#EF4444</div>
+                    <p><strong>Error</strong></p>
+                </div>
+                <div class="card">
+                    <div class="color-swatch info" onclick="copyColor('#3B82F6')">#3B82F6</div>
+                    <p><strong>Info</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Typography -->
+        <section class="section">
+            <h2>C. 타이포그래피</h2>
+            <div class="card typography-demo">
+                <h1>H1: 메인 타이틀 (28-32px)</h1>
+                <h2>H2: 섹션 헤더 (24px)</h2>
+                <h3>H3: 서브 헤더 (20px)</h3>
+                <p>Body: 본문 텍스트 (16-18px) - Base 16px / Line-height 1.6</p>
+                <p class="caption">Caption: 보조 텍스트 (14px)</p>
+                <p style="margin-top: 16px;"><strong>웹폰트:</strong> Pretendard / SUIT / Noto Sans KR</p>
+            </div>
+        </section>
+
+        <!-- Components -->
+        <section class="section">
+            <h2>E. 컴포넌트 시스템</h2>
+            
+            <h3>Buttons</h3>
+            <div class="card">
+                <div class="demo-controls">
+                    <button class="btn btn-primary">Primary Button</button>
+                    <button class="btn btn-secondary">Secondary Button</button>
+                    <button class="btn btn-ghost">Ghost Button</button>
+                </div>
+                <p><small>터치 타겟 44×44px 이상, Focus 시 2px 외곽선</small></p>
+            </div>
+
+            <h3>Chips (카테고리·필터)</h3>
+            <div class="card">
+                <div class="demo-controls">
+                    <span class="chip">일상</span>
+                    <span class="chip active">가족</span>
+                    <span class="chip">추억</span>
+                    <span class="chip">미래</span>
+                    <span class="chip">감정</span>
+                </div>
+                <p><small>라운드 9999px, 선택 시 Secondary 100 배경+600 텍스트</small></p>
+            </div>
+        </section>
+
+        <!-- Interactive Demo -->
+        <section class="section">
+            <h2>F. 상호작용 & 모션</h2>
+            
+            <h3>자기표현 게이트 데모</h3>
+            <div class="interactive-section">
+                <div class="question-card">
+                    <h3>오늘 가장 감사했던 순간은 무엇인가요?</h3>
+                    <p>먼저 내 마음을 전해보세요</p>
+                </div>
+                
+                <div class="grid grid-2" style="margin-top: 24px;">
+                    <div class="card">
+                        <h4>내 답변</h4>
+                        <textarea class="answer-area" placeholder="내 마음을 전해주세요... (최대 500자)" maxlength="500"></textarea>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 12px; flex-wrap: wrap; gap: 8px;">
+                            <span style="font-size: 12px; color: var(--gray-700);">0/500자</span>
+                            <button class="btn btn-primary" onclick="submitAnswer()" style="flex-shrink: 0;">마음 전달하기</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h4>가족 답변</h4>
+                        <div id="partnerAnswer" class="answer-area blurred-demo" style="display: flex; align-items: center; justify-content: center; color: var(--gray-700); flex-direction: column; gap: 8px;">
+                            <span>내 마음을 먼저 전해주세요</span>
+                            <span style="font-size: 24px;">✍️</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="background: var(--color-secondary-100); border: 1px solid var(--color-secondary-600); padding: 12px; border-radius: 8px; margin-top: 16px;">
+                    <p style="color: var(--color-secondary-600); font-size: 14px;">
+                        💡 자기표현 게이트: 내 답변 작성 전까지는 상대방 답변을 볼 수 없어요. 진정성 있는 마음 전달을 위한 설계입니다.
+                    </p>
+                </div>
+            </div>
+
+            <h3>완료 축하 효과</h3>
+            <div class="card">
+                <p style="margin-bottom: 16px;">마음이 전달되면 짧은 축하 효과가 나타납니다. (과하지 않게 600ms)</p>
+                <button class="btn btn-primary" onclick="celebrate()">축하 효과 보기</button>
+                <div id="celebration" class="celebration" style="height: 80px; margin-top: 16px; background: var(--color-primary-100); border: 1px solid var(--color-primary-400); border-radius: 8px; position: relative; display: flex; align-items: center; justify-content: center; color: var(--gray-700);">
+                    마음 전달 완료 시 여기에 효과가 나타납니다
+                </div>
+            </div>
+        </section>
+
+        <!-- Layout Examples -->
+        <section class="section">
+            <h2>G. 핵심 화면 레이아웃</h2>
+            
+            <h3>홈 화면 (오늘의 질문)</h3>
+            <div class="card">
+                <div style="text-align: center; padding: 24px; background: var(--color-primary-100); border: 1px solid var(--color-primary-400); border-radius: 12px;">
+                    <h3 style="color: var(--color-primary-600); margin-bottom: 16px;">2025.08.25 오늘의 질문</h3>
+                    <p style="font-size: 18px; color: var(--gray-700); margin-bottom: 24px;">
+                        "최근 새로 시도해본 것이 있다면 무엇인가요?"
+                    </p>
+                    
+                    <!-- 상태 스테퍼 -->
+                    <div style="display: flex; justify-content: center; align-items: center; gap: 16px; margin-bottom: 24px;">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <div style="width: 24px; height: 24px; border-radius: 50%; background: var(--success); color: white; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold;">✓</div>
+                            <span style="font-size: 14px; color: var(--gray-700);">확인</span>
+                        </div>
+                        <div style="width: 20px; height: 2px; background: var(--gray-300);"></div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <div style="width: 24px; height: 24px; border-radius: 50%; background: var(--color-primary-600); color: white; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold;">2</div>
+                            <span style="font-size: 14px; color: var(--color-primary-600); font-weight: 500;">내 답변</span>
+                        </div>
+                        <div style="width: 20px; height: 2px; background: var(--gray-300);"></div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <div style="width: 24px; height: 24px; border-radius: 50%; background: var(--gray-300); display: flex; align-items: center; justify-content: center; font-size: 12px;">3</div>
+                            <span style="font-size: 14px; color: var(--gray-700);">가족 답변</span>
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; gap: 12px; justify-content: center;">
+                        <button class="btn btn-primary">가족에게 마음 전하기</button>
+                        <button class="btn btn-secondary">내 마음 적기</button>
+                    </div>
+                </div>
+            </div>
+
+            <h3>주간 하이라이트 카드</h3>
+            <div class="card">
+                <div style="background: var(--color-primary-100); border: 2px solid var(--color-primary-400); color: var(--color-primary-600); padding: 24px; border-radius: 12px; text-align: center;">
+                    <h3 style="color: var(--color-primary-600); margin-bottom: 16px;">이번 주 우리 가족 대화 💝</h3>
+                    <div style="background: white; border: 1px solid var(--color-primary-400); padding: 16px; border-radius: 8px; margin-bottom: 16px; text-align: left;">
+                        <p><strong>엄마와의 Best 3 대화</strong></p>
+                        <p style="margin: 8px 0;">• 월요일: 어린 시절 추억의 간식</p>
+                        <p style="margin: 8px 0;">• 수요일: 요즘 관심 있는 취미</p>
+                        <p style="margin: 8px 0;">• 금요일: 가족과 함께하고 싶은 여행</p>
+                    </div>
+                    <p style="margin-bottom: 16px;">이번 주 대화 <strong>7회</strong> | 응답률 <strong>100%</strong></p>
+                    <button class="btn btn-primary">카카오톡 공유하기</button>
+                </div>
+                
+                <div style="background: var(--color-secondary-100); border: 1px solid var(--color-secondary-600); padding: 12px; border-radius: 8px; margin-top: 16px;">
+                    <p style="color: var(--color-secondary-600); font-size: 14px;">
+                        📅 매주 일요일 저녁 6시에 자동으로 생성되며, 카카오톡/인스타그램으로 공유할 수 있습니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Accessibility -->
+        <section class="section">
+            <h2>H. 접근성 & 사용자 경험</h2>
+            
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>마이크로카피 예시</h3>
+                    <div style="background: var(--color-primary-100); border: 1px solid var(--color-primary-400); padding: 16px; border-radius: 8px;">
+                        <ul style="line-height: 1.8; margin: 0; padding-left: 20px; color: var(--color-primary-600);">
+                            <li>"누구에게 마음을 전할까요?" 💝</li>
+                            <li>"먼저 내 마음부터 전해보세요" ✍️</li>
+                            <li>"서로의 마음이 연결되었어요!" 💕</li>
+                            <li>"이번 주 우리 가족 이야기" 📖</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3>접근성 체크리스트</h3>
+                    <div style="background: var(--color-secondary-100); border: 1px solid var(--color-secondary-600); padding: 16px; border-radius: 8px;">
+                        <ul style="line-height: 1.8; margin: 0; padding-left: 20px; color: var(--color-secondary-600);">
+                            <li>✅ 텍스트 대비 4.5:1 이상</li>
+                            <li>✅ 터치 영역 44×44px 이상</li>
+                            <li>✅ 아이콘+라벨 병기</li>
+                            <li>✅ 색상 정보 전달 금지</li>
+                            <li>✅ 도움말 텍스트 제공</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>라벨 기반 전송 시스템</h3>
+            <div class="card">
+                <div style="background: white; border: 1px solid var(--color-primary-400); padding: 20px; border-radius: 8px;">
+                    <h4 style="color: var(--color-primary-600); margin-bottom: 16px;">가족 선택 모달</h4>
+                    <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+                        <span class="chip active">엄마 (최근: 김○○님)</span>
+                        <span class="chip">아빠</span>
+                        <span class="chip">할머니</span>
+                        <span class="chip" style="opacity: 0.5; text-decoration: line-through;">형 (수신거부)</span>
+                        <span class="chip" style="border: 2px dashed var(--gray-300); background: transparent;">+ 새 가족 추가</span>
+                    </div>
+                    <button class="btn btn-primary" style="width: 100%;">카카오로 보내기</button>
+                </div>
+                
+                <div style="background: var(--info); color: white; padding: 12px; border-radius: 8px; margin-top: 16px;">
+                    <p style="color: white; font-size: 14px; margin: 0;">
+                        💡 자동 바인딩: 한 번 마음을 주고받은 가족은 자동으로 기억되어 다음부터 1탭으로 전송 가능합니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            const toggleBtn = document.querySelector('.theme-toggle');
+            
+            body.setAttribute('data-theme', newTheme);
+            toggleBtn.textContent = newTheme === 'light' ? '🌙 다크모드' : '☀️ 라이트모드';
+        }
+
+        function copyColor(color) {
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(color).then(() => {
+                    showToast(`${color} 복사됨!`);
+                });
+            } else {
+                // 폴백: 텍스트 선택 방식
+                const textArea = document.createElement('textarea');
+                textArea.value = color;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                showToast(`${color} 복사됨!`);
+            }
+        }
+
+        function showToast(message) {
+            const toast = document.createElement('div');
+            toast.textContent = message;
+            toast.style.cssText = `
+                position: fixed;
+                bottom: 80px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: var(--gray-900);
+                color: white;
+                padding: 12px 20px;
+                border-radius: 8px;
+                font-size: 14px;
+                z-index: 1000;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            `;
+            document.body.appendChild(toast);
+            
+            setTimeout(() => toast.style.opacity = '1', 10);
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                setTimeout(() => document.body.removeChild(toast), 300);
+            }, 2000);
+        }
+
+        function submitAnswer() {
+            const partnerAnswer = document.getElementById('partnerAnswer');
+            const textarea = document.querySelector('.answer-area');
+            
+            if (textarea.value.trim() === '') {
+                alert('마음을 전해주세요!');
+                return;
+            }
+            
+            partnerAnswer.classList.add('revealed');
+            partnerAnswer.innerHTML = `
+                <div style="padding: 16px; text-align: left;">
+                    <p>"오늘 처음으로 요가 수업에 갔어요. 생각보다 어려웠지만 몸이 개운해지는 느낌이 좋더라고요. 앞으로도 꾸준히 해보려고 해요!"</p>
+                    <div style="margin-top: 12px; display: flex; gap: 8px; justify-content: center; flex-wrap: wrap;">
+                        <span style="cursor: pointer; font-size: 18px; padding: 8px 12px; border-radius: 20px; background: var(--color-primary-100); transition: all 0.15s ease; -webkit-tap-highlight-color: transparent;" onclick="this.style.background='var(--color-primary-400)'">❤️</span>
+                        <span style="cursor: pointer; font-size: 18px; padding: 8px 12px; border-radius: 20px; background: var(--color-primary-100); transition: all 0.15s ease; -webkit-tap-highlight-color: transparent;" onclick="this.style.background='var(--color-primary-400)'">👍</span>
+                        <span style="cursor: pointer; font-size: 18px; padding: 8px 12px; border-radius: 20px; background: var(--color-primary-100); transition: all 0.15s ease; -webkit-tap-highlight-color: transparent;" onclick="this.style.background='var(--color-primary-400)'">😊</span>
+                        <span style="cursor: pointer; font-size: 18px; padding: 8px 12px; border-radius: 20px; background: var(--color-primary-100); transition: all 0.15s ease; -webkit-tap-highlight-color: transparent;" onclick="this.style.background='var(--color-primary-400)'">👏</span>
+                        <span style="cursor: pointer; font-size: 18px; padding: 8px 12px; border-radius: 20px; background: var(--color-primary-100); transition: all 0.15s ease; -webkit-tap-highlight-color: transparent;" onclick="this.style.background='var(--color-primary-400)'">🥰</span>
+                    </div>
+                </div>
+            `;
+            
+            // 축하 효과 자동 실행
+            setTimeout(() => {
+                celebrate();
+            }, 500);
+        }
+
+        function celebrate() {
+            const celebrationDiv = document.getElementById('celebration');
+            celebrationDiv.innerHTML = '';
+            
+            // 메시지 표시
+            const message = document.createElement('div');
+            message.textContent = '🎉 마음이 전달되었어요! 🎉';
+            message.style.fontSize = '16px';
+            message.style.fontWeight = 'bold';
+            message.style.color = 'var(--color-primary-600)';
+            celebrationDiv.appendChild(message);
+            
+            // 간단한 컨페티 효과 (과하지 않게)
+            for (let i = 0; i < 8; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = Math.random() * 100 + '%';
+                confetti.style.backgroundColor = i % 3 === 0 ? 'var(--color-primary-500)' : 
+                                                 i % 3 === 1 ? 'var(--color-secondary-600)' : 
+                                                 'var(--success)';
+                confetti.style.animationDelay = Math.random() * 0.2 + 's';
+                celebrationDiv.appendChild(confetti);
+                
+                setTimeout(() => {
+                    if (confetti.parentNode) {
+                        confetti.remove();
+                    }
+                }, 700);
+            }
+        }
+
+        // 글자수 카운터 추가
+        document.addEventListener('DOMContentLoaded', function() {
+            const textarea = document.querySelector('.answer-area');
+            if (textarea) {
+                const counter = document.querySelector('.answer-area').parentNode.querySelector('span');
+                textarea.addEventListener('input', function() {
+                    const count = this.value.length;
+                    if (counter) {
+                        counter.textContent = `${count}/500자`;
+                        counter.style.color = count > 450 ? 'var(--warning)' : 'var(--gray-700)';
+                    }
+                });
+            }
+            
+            // Chip 상호작용
+            const chips = document.querySelectorAll('.chip:not(.active)');
+            chips.forEach(chip => {
+                chip.addEventListener('click', function() {
+                    if (!this.style.opacity || this.style.opacity !== '0.5') {
+                        chips.forEach(c => c.classList.remove('active'));
+                        this.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
