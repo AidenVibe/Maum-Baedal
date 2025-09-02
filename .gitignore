@@ -39,3 +39,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local-only tools and test/admin UIs
+.claude/
+.claude.json
+Claude_Optiomize_Guide/
+SuperClaude/
+app/test/
+app/dev/
+app/admin/
+components/dev/
+scripts/local-*/
+*.local.*
