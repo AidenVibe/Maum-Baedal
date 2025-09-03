@@ -1,6 +1,3 @@
-// Prisma Schema for 마음배달 v2 (Dear Q)
-// 6-Table 미니멀 설계 + NextAuth 지원
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -10,22 +7,21 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-// NextAuth.js Required Models
 model Account {
-  id                String  @id @default(cuid())
-  userId            String
-  type              String
-  provider          String
-  providerAccountId String
-  refresh_token     String? @db.Text
-  access_token      String? @db.Text
-  expires_at        Int?
-  token_type        String?
-  scope             String?
-  id_token          String? @db.Text
-  session_state     String?
-
-  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  id                       String  @id @default(cuid())
+  userId                   String
+  type                     String
+  provider                 String
+  providerAccountId        String
+  refresh_token            String?
+  access_token             String?
+  expires_at               Int?
+  refresh_token_expires_in Int?
+  token_type               String?
+  scope                    String?
+  id_token                 String?
+  session_state            String?
+  user                     User    @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([provider, providerAccountId])
   @@map("accounts")
@@ -50,128 +46,292 @@ model VerificationToken {
   @@map("verification_tokens")
 }
 
-// 핵심 비즈니스 모델 (6-Table Design)
 model User {
-  id            String    @id @default(cuid())
-  name          String?
-  email         String?   @unique
-  emailVerified DateTime?
-  image         String?
-  
-  // 마음배달 전용 필드
-  kakaoSub      String?   @unique  // 카카오 고유 ID
-  nickname      String?              // 사용자 표시명
-  label         String?              // 가족 관계 라벨 (예: 엄마, 아들)
-  createdAt     DateTime  @default(now())
-  updatedAt     DateTime  @updatedAt
-
-  // Relations
-  accounts      Account[]
-  sessions      Session[]
-  pairsAsUser1  Pair[]    @relation("PairUser1")
-  pairsAsUser2  Pair[]    @relation("PairUser2")
-  answers       Answer[]
+  id                    String            @id @default(cuid())
+  name                  String?
+  email                 String?           @unique
+  emailVerified         DateTime?
+  image                 String?
+  kakaoSub              String?           @unique
+  nickname              String?
+  bio                   String?
+  label                 String?
+  interests             String[]
+  onboardedAt           DateTime?
+  createdAt             DateTime          @default(now())
+  updatedAt             DateTime          @updatedAt
+  accounts              Account[]
+  answers               Answer[]
+  assignmentShares      AssignmentShare[] @relation("AssignmentShareSharer")
+  usedShares            AssignmentShare[] @relation("AssignmentShareUser")
+  companionsAsUser1     Companion[]       @relation("CompanionUser1")
+  companionsAsUser2     Companion[]       @relation("CompanionUser2")
+  devScenariosAsPartner DevScenario[]     @relation("DevScenarioPartner")
+  devScenariosAsUser    DevScenario[]            @relation("DevScenarioUser")
+  sessions              Session[]
+  shareTokensCreated    ShareToken[]             @relation("ShareTokenCreator")
+  notificationLogs      NotificationLog[]
+  notificationSetting   NotificationSetting?
+  scheduledNotifications ScheduledNotification[]
 
   @@map("users")
 }
 
-model Pair {
-  id         String   @id @default(cuid())
-  user1Id    String
-  user2Id    String
-  inviteCode String   @unique  // 초대코드 (온보딩용)
-  status     String   @default("active")  // active, paused, inactive
-  createdAt  DateTime @default(now())
-  updatedAt  DateTime @updatedAt
+model ShareToken {
+  id          String     @id @default(cuid())
+  token       String     @unique
+  creatorId   String
+  message     String?
+  status      String     @default("pending")
+  createdAt   DateTime   @default(now())
+  expiresAt   DateTime
+  usedAt      DateTime?
+  companionId String?    @unique
+  companion   Companion? @relation(fields: [companionId], references: [id])
+  creator     User       @relation("ShareTokenCreator", fields: [creatorId], references: [id])
 
-  // Relations
-  user1       User         @relation("PairUser1", fields: [user1Id], references: [id])
-  user2       User         @relation("PairUser2", fields: [user2Id], references: [id])
-  assignments Assignment[]
+  @@map("share_tokens")
+}
 
-  @@unique([user1Id, user2Id])
-  @@map("pairs")
+model Companion {
+  id            String       @id @default(cuid())
+  user1Id       String
+  user2Id       String?
+  status        String       @default("pending")
+  createdAt     DateTime     @default(now())
+  updatedAt     DateTime     @updatedAt
+  connectedAt   DateTime?
+  shareToken    String?      @unique
+  shareMethod   String?
+  shareData     Json?
+  expiresAt     DateTime?
+  inviteCode    String?      @unique
+  assignments   Assignment[]
+  user1         User         @relation("CompanionUser1", fields: [user1Id], references: [id])
+  user2         User?        @relation("CompanionUser2", fields: [user2Id], references: [id])
+  shareTokenRef ShareToken?
+
+  @@map("companions")
 }
 
 model Question {
-  id          String   @id @default(cuid())
-  content     String   @db.Text
-  category    String   @default("general")  // general, family, memory, etc.
-  difficulty  String   @default("easy")     // easy, medium, hard
-  isActive    Boolean  @default(true)
-  
-  // Analytics
-  totalUsed   Int      @default(0)         // 사용 횟수
-  totalSwaps  Int      @default(0)         // 교체 횟수  
-  
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-
-  // Relations
-  assignments Assignment[]
+  id           String       @id @default(cuid())
+  content      String
+  category     String       @default("general")
+  difficulty   String       @default("easy")
+  isActive     Boolean      @default(true)
+  totalUsed    Int          @default(0)
+  totalAnswers Int          @default(0)
+  avgRating    Float?
+  createdAt    DateTime     @default(now())
+  updatedAt    DateTime     @updatedAt
+  assignments  Assignment[]
 
   @@map("questions")
 }
 
 model Assignment {
-  id          String   @id @default(cuid())
-  pairId      String
-  serviceDay  String   // "YYYY-MM-DD" 형식 (KST 05:00 기준)
-  questionId  String
-  swapCount   Int      @default(0)         // 질문 교체 횟수 (최대 1회)
-  status      String   @default("active")  // active, completed, expired
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-
-  // Relations
-  pair         Pair          @relation(fields: [pairId], references: [id])
-  question     Question      @relation(fields: [questionId], references: [id])
+  id           String            @id @default(cuid())
+  companionId  String
+  serviceDay   String
+  questionId   String
+  status       String            @default("active")
+  createdAt    DateTime          @default(now())
+  updatedAt    DateTime          @updatedAt
   answers      Answer[]
+  shares       AssignmentShare[]
+  companion    Companion         @relation(fields: [companionId], references: [id])
+  question     Question          @relation(fields: [questionId], references: [id])
   conversation Conversation?
 
-  @@unique([pairId, serviceDay])  // 중요: 하루에 쌍당 1개만
+  @@unique([companionId, serviceDay])
   @@map("assignments")
 }
 
 model Answer {
-  id           String   @id @default(cuid())
+  id           String     @id @default(cuid())
   assignmentId String
   userId       String
-  content      String   @db.Text
-  createdAt    DateTime @default(now())
-  updatedAt    DateTime @updatedAt
+  content      String
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+  assignment   Assignment @relation(fields: [assignmentId], references: [id])
+  user         User       @relation(fields: [userId], references: [id])
 
-  // Relations
-  assignment Assignment @relation(fields: [assignmentId], references: [id])
-  user       User       @relation(fields: [userId], references: [id])
-
-  @@unique([assignmentId, userId])  // 중요: Assignment당 사용자 1명은 1개 답변만
+  @@unique([assignmentId, userId])
   @@map("answers")
 }
 
 model Conversation {
-  id           String   @id @default(cuid())
-  assignmentId String   @unique
-  isPublic     Boolean  @default(true)
-  createdAt    DateTime @default(now())  // 게이트 공개 시점
-
-  // Relations
-  assignment Assignment @relation(fields: [assignmentId], references: [id])
+  id           String     @id @default(cuid())
+  assignmentId String     @unique
+  isPublic     Boolean    @default(true)
+  createdAt    DateTime   @default(now())
+  assignment   Assignment @relation(fields: [assignmentId], references: [id])
 
   @@map("conversations")
 }
 
-// 운영 및 분석용 모델 (추후 확장)
-model DailyStat {
-  id             String   @id @default(cuid())
-  date           String   // "YYYY-MM-DD" 
-  totalPairs     Int      @default(0)
-  activeAssignments Int   @default(0)
-  completedGates Int      @default(0)  // 게이트 공개 완료 수
-  totalAnswers   Int      @default(0)
-  totalSwaps     Int      @default(0)  // 질문 교체 총 횟수
-  createdAt      DateTime @default(now())
+model AssignmentShare {
+  id           String     @id @default(cuid())
+  assignmentId String
+  sharerId     String
+  token        String     @unique
+  message      String?
+  isActive     Boolean    @default(true)
+  createdAt    DateTime   @default(now())
+  expiresAt    DateTime
+  usedAt       DateTime?
+  usedBy       String?
+  assignment   Assignment @relation(fields: [assignmentId], references: [id])
+  sharer       User       @relation("AssignmentShareSharer", fields: [sharerId], references: [id])
+  user         User?      @relation("AssignmentShareUser", fields: [usedBy], references: [id])
 
-  @@unique([date])
+  @@unique([assignmentId, sharerId])
+  @@map("assignment_shares")
+}
+
+model DailyStat {
+  id                    String   @id @default(cuid())
+  date                  String   @unique
+  totalCompanions       Int      @default(0)
+  activeAssignments     Int      @default(0)
+  completedGates        Int      @default(0)
+  totalAnswers          Int      @default(0)
+  shareTokensCreated    Int      @default(0)
+  shareTokensUsed       Int      @default(0)
+  newOnboardings        Int      @default(0)
+  personalizedQuestions Int      @default(0)
+  randomQuestions       Int      @default(0)
+  avgInterestsPerUser   Float?
+  createdAt             DateTime @default(now())
+
   @@map("daily_stats")
+}
+
+model DevScenario {
+  id         String   @id @default(cuid())
+  scenarioId String   @unique
+  userId     String
+  partnerId  String?
+  setupData  Json?
+  isActive   Boolean  @default(true)
+  lastUsed   DateTime @default(now())
+  createdAt  DateTime @default(now())
+  partner    User?    @relation("DevScenarioPartner", fields: [partnerId], references: [id])
+  user       User     @relation("DevScenarioUser", fields: [userId], references: [id])
+
+  @@map("dev_scenarios")
+}
+
+// 알림 템플릿 관리
+model NotificationTemplate {
+  id                     String                 @id @default(cuid())
+  name                   String                 @unique  // DAILY_QUESTION, ANSWER_REMINDER 등
+  templateId             String                 @unique  // 솔라피 알림톡 템플릿 ID
+  type                   NotificationType
+  title                  String
+  content                String                           // 템플릿 내용 (변수 포함)
+  smsContent             String?                          // SMS 대체발송 내용
+  variables              Json?                            // 템플릿 변수 스키마
+  isActive               Boolean                @default(true)
+  createdAt              DateTime               @default(now())
+  updatedAt              DateTime               @updatedAt
+  logs                   NotificationLog[]
+  scheduledNotifications ScheduledNotification[]
+
+  @@map("notification_templates")
+}
+
+// 알림 발송 로그
+model NotificationLog {
+  id                String                 @id @default(cuid())
+  templateId        String
+  userId            String
+  phoneNumber       String
+  messageId         String?                          // 솔라피 메시지 ID
+  type              NotificationType
+  status            NotificationStatus     @default(PENDING)
+  content           String                           // 실제 발송된 내용
+  variables         Json?                            // 치환된 변수값
+  solapiResponse    Json?                            // 솔라피 응답 데이터
+  errorMessage      String?
+  sentAt            DateTime?
+  deliveredAt       DateTime?
+  failedAt          DateTime?
+  retryCount        Int                    @default(0)
+  maxRetries        Int                    @default(3)
+  createdAt         DateTime               @default(now())
+  updatedAt         DateTime               @updatedAt
+  template          NotificationTemplate   @relation(fields: [templateId], references: [id])
+  user              User                   @relation(fields: [userId], references: [id])
+
+  @@index([userId, createdAt])
+  @@index([type, status])
+  @@index([sentAt])
+  @@map("notification_logs")
+}
+
+// 알림 설정 (사용자별)
+model NotificationSetting {
+  id                     String   @id @default(cuid())
+  userId                 String   @unique
+  phoneNumber            String?              // 사용자 휴대폰 번호
+  enableDailyQuestion    Boolean  @default(true)    // 일일 질문 알림
+  enableAnswerReminder   Boolean  @default(true)    // 답변 리마인드
+  enableGateOpened       Boolean  @default(true)    // 게이트 공개 알림
+  enableCompanionJoined  Boolean  @default(true)    // 동반자 참여 알림
+  reminderTime           String?  @default("19:00") // 리마인드 시간 (HH:MM)
+  isActive               Boolean  @default(true)
+  createdAt              DateTime @default(now())
+  updatedAt              DateTime @updatedAt
+  user                   User     @relation(fields: [userId], references: [id])
+
+  @@map("notification_settings")
+}
+
+// 스케줄된 알림 (크론잡용)
+model ScheduledNotification {
+  id           String                 @id @default(cuid())
+  userId       String
+  templateId   String
+  scheduledAt  DateTime
+  data         Json?                           // 알림 발송에 필요한 데이터
+  status       ScheduleStatus         @default(PENDING)
+  attempts     Int                    @default(0)
+  maxAttempts  Int                    @default(3)
+  processedAt  DateTime?
+  errorMessage String?
+  createdAt    DateTime               @default(now())
+  updatedAt    DateTime               @updatedAt
+  template     NotificationTemplate   @relation(fields: [templateId], references: [id])
+  user         User                   @relation(fields: [userId], references: [id])
+
+  @@index([scheduledAt, status])
+  @@index([userId])
+  @@map("scheduled_notifications")
+}
+
+// Enum 정의들
+enum NotificationType {
+  DAILY_QUESTION      // 일일 질문 발송
+  ANSWER_REMINDER     // 답변 리마인드
+  GATE_OPENED         // 게이트 공개 알림
+  COMPANION_JOINED    // 동반자 참여 알림
+}
+
+enum NotificationStatus {
+  PENDING       // 발송 대기
+  SENT          // 발송 완료
+  DELIVERED     // 전달 완료
+  FAILED        // 발송 실패
+  CANCELLED     // 발송 취소
+}
+
+enum ScheduleStatus {
+  PENDING       // 스케줄 대기
+  PROCESSING    // 처리 중
+  COMPLETED     // 처리 완료
+  FAILED        // 처리 실패
+  CANCELLED     // 취소됨
 }

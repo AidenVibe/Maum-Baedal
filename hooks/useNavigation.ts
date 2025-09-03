@@ -1,6 +1,6 @@
 "use client"
 
-import { usePathname, useRouter } from "next/navigation"
+import { usePathname, useRouter, useSearchParams } from "next/navigation"
 import { useCallback } from "react"
 import { mainNavigation, shouldShowNavigation } from "@/lib/navigation"
 import type { NavItem } from "@/lib/navigation"
@@ -8,6 +8,7 @@ import type { NavItem } from "@/lib/navigation"
 export function useNavigation() {
   const pathname = usePathname()
   const router = useRouter()
+  const searchParams = useSearchParams()
 
   const getVisibleNavItems = useCallback((): NavItem[] => {
     return mainNavigation.filter(item => {
@@ -29,8 +30,13 @@ export function useNavigation() {
   }, [pathname])
 
   const navigate = useCallback((href: string) => {
-    router.push(href)
-  }, [router])
+    // 현재 URL의 쿼리 파라미터를 보존 (test_mode 등)
+    const params = new URLSearchParams(searchParams.toString())
+    const queryString = params.toString()
+    const urlWithParams = queryString ? `${href}?${queryString}` : href
+    
+    router.push(urlWithParams)
+  }, [router, searchParams])
 
   const showNavigation = shouldShowNavigation(pathname)
 

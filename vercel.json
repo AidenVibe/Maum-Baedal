@@ -1,0 +1,20 @@
+{
+  "functions": {
+    "app/api/cron/daily-broadcast/route.ts": {
+      "maxDuration": 300
+    },
+    "app/api/cron/reminder-broadcast/route.ts": {
+      "maxDuration": 300
+    }
+  },
+  "crons": [
+    {
+      "path": "/api/cron/daily-broadcast",
+      "schedule": "0 23 * * *"
+    },
+    {
+      "path": "/api/cron/reminder-broadcast", 
+      "schedule": "0 10 * * *"
+    }
+  ]
+}

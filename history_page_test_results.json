@@ -1,0 +1,46 @@
+{
+  "test_timestamp": "2025. 9. 2. 오전 9:30:22",
+  "page_url": "http://localhost:3000/history?test_mode=true",
+  "tests": [
+    {
+      "test_name": "페이지 로딩 시간",
+      "result": "1.888초",
+      "status": "추가 최적화 필요",
+      "target": "< 0.8초"
+    },
+    {
+      "test_name": "테스트 모드 컴포넌트 표시",
+      "result": "2개의 테스트 컴포넌트 표시됨 (상태: 0, 드롭다운: 2)",
+      "status": "성공"
+    },
+    {
+      "test_name": "Mock 데이터 로딩",
+      "result": "History 페이지 콘텐츠 로딩됨",
+      "status": "성공"
+    },
+    {
+      "test_name": "Cumulative Layout Shift (CLS)",
+      "result": "0.0850",
+      "status": "우수",
+      "target": "< 0.1"
+    },
+    {
+      "test_name": "하이드레이션 후 DOM 변화",
+      "result": "0개의 변화 감지됨",
+      "status": "안정적",
+      "details": []
+    },
+    {
+      "test_name": "성능 지표",
+      "result": "FCP: 560ms, DOM: 0ms",
+      "status": "우수",
+      "details": {
+        "domContentLoaded": 0.09999996423721313,
+        "loadComplete": 0.10000002384185791,
+        "firstPaint": 560,
+        "firstContentfulPaint": 560
+      }
+    }
+  ],
+  "screenshot_path": "history_page_after_fix.png"
+}

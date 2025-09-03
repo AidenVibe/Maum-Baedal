@@ -87,21 +87,31 @@ export const MOCK_USERS = {
 
 /**
  * 테스트 모드 활성화 여부 확인 (URL 기반)
- * /test 경로에서만 목업 데이터 활성화
+ * /test 또는 /admin/test 경로에서 목업 데이터 활성화
  */
 export function isTestMode(): boolean {
   if (typeof window === 'undefined') return false
   
-  // /test 경로에서만 테스트 모드 활성화
-  return window.location.pathname.startsWith('/test')
+  // /test 또는 /admin/test 경로에서 테스트 모드 활성화
+  return window.location.pathname.startsWith('/test') || 
+         window.location.pathname.startsWith('/admin/test')
 }
 
 /**
  * URL에서 test_mode=true 파라미터 확인
  * 실제 페이지에서 테스트 시나리오 드롭다운 표시 여부 결정
+ * 보안상 /admin 경로에서만 test_mode 파라미터 허용
  */
 export function isTestModeParam(): boolean {
   if (typeof window === 'undefined') return false
+  
+  // 보안: /admin 경로에서만 test_mode 파라미터 허용
+  const pathname = window.location.pathname
+  const isAdminPath = pathname.startsWith('/admin')
+  
+  if (!isAdminPath) {
+    return false
+  }
   
   const urlParams = new URLSearchParams(window.location.search)
   return urlParams.get('test_mode') === 'true'

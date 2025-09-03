@@ -1,0 +1,1736 @@
+{
+  "timestamp": "2025-09-02T11:36:28.239Z",
+  "url": "https://www.nineonelabs.co.kr/",
+  "components": {
+    "buttons": [
+      {
+        "text": "회사소개",
+        "className": "no-gnb__link no-btn no-btn-text",
+        "tagName": "a",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(14, 14, 14)",
+          "fontSize": "18px",
+          "fontWeight": "600",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(14, 14, 14)",
+          "boxShadow": "none",
+          "display": "inline-flex",
+          "textAlign": "left",
+          "lineHeight": "20.25px"
+        }
+      },
+      {
+        "text": "프로젝트",
+        "className": "no-gnb__link no-btn no-btn-text",
+        "tagName": "a",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(14, 14, 14)",
+          "fontSize": "18px",
+          "fontWeight": "600",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(14, 14, 14)",
+          "boxShadow": "none",
+          "display": "inline-flex",
+          "textAlign": "left",
+          "lineHeight": "20.25px"
+        }
+      },
+      {
+        "text": "서비스",
+        "className": "no-gnb__link no-btn no-btn-text",
+        "tagName": "a",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(14, 14, 14)",
+          "fontSize": "18px",
+          "fontWeight": "600",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(14, 14, 14)",
+          "boxShadow": "none",
+          "display": "inline-flex",
+          "textAlign": "left",
+          "lineHeight": "20.25px"
+        }
+      },
+      {
+        "text": "고객센터",
+        "className": "no-gnb__link no-btn no-btn-text",
+        "tagName": "a",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(14, 14, 14)",
+          "fontSize": "18px",
+          "fontWeight": "600",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(14, 14, 14)",
+          "boxShadow": "none",
+          "display": "inline-flex",
+          "textAlign": "left",
+          "lineHeight": "20.25px"
+        }
+      },
+      {
+        "text": "프로젝트 문의",
+        "className": "no-btn no-btn--primary no-btn-click no-btn-sm",
+        "tagName": "a",
+        "styles": {
+          "backgroundColor": "rgb(102, 53, 240)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "20px",
+          "fontWeight": "400",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "40px",
+          "border": "0px none rgb(255, 255, 255)",
+          "boxShadow": "none",
+          "display": "flex",
+          "textAlign": "start",
+          "lineHeight": "22.5px"
+        }
+      },
+      {
+        "text": "",
+        "className": "",
+        "tagName": "button",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(14, 14, 14)",
+          "fontSize": "20px",
+          "fontWeight": "400",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(14, 14, 14)",
+          "boxShadow": "none",
+          "display": "inline-block",
+          "textAlign": "start",
+          "lineHeight": "22.5px"
+        }
+      },
+      {
+        "text": "회사소개회사소개",
+        "className": "no-drawer__menu-link no-btn-text",
+        "tagName": "a",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "64px",
+          "fontWeight": "700",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(255, 255, 255)",
+          "boxShadow": "none",
+          "display": "inline-block",
+          "textAlign": "left",
+          "lineHeight": "80px"
+        }
+      },
+      {
+        "text": "프로젝트프로젝트",
+        "className": "no-drawer__menu-link no-btn-text",
+        "tagName": "a",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "64px",
+          "fontWeight": "700",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(255, 255, 255)",
+          "boxShadow": "none",
+          "display": "inline-block",
+          "textAlign": "left",
+          "lineHeight": "80px"
+        }
+      },
+      {
+        "text": "서비스서비스",
+        "className": "no-drawer__menu-link no-btn-text",
+        "tagName": "a",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "64px",
+          "fontWeight": "700",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(255, 255, 255)",
+          "boxShadow": "none",
+          "display": "inline-block",
+          "textAlign": "left",
+          "lineHeight": "80px"
+        }
+      },
+      {
+        "text": "고객센터고객센터",
+        "className": "no-drawer__menu-link no-btn-text",
+        "tagName": "a",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "64px",
+          "fontWeight": "700",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(255, 255, 255)",
+          "boxShadow": "none",
+          "display": "inline-block",
+          "textAlign": "left",
+          "lineHeight": "80px"
+        }
+      },
+      {
+        "text": "프로젝트 문의프로젝트 문의",
+        "className": "no-drawer__menu-link no-btn-text",
+        "tagName": "a",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(252, 240, 18)",
+          "fontSize": "64px",
+          "fontWeight": "700",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(252, 240, 18)",
+          "boxShadow": "none",
+          "display": "inline-block",
+          "textAlign": "left",
+          "lineHeight": "80px"
+        }
+      },
+      {
+        "text": "master@nineonelabs.co.kr",
+        "className": "no-btn no-btn-text",
+        "tagName": "a",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgba(255, 255, 255, 0.7)",
+          "fontSize": "20px",
+          "fontWeight": "400",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgba(255, 255, 255, 0.7)",
+          "boxShadow": "none",
+          "display": "inline-flex",
+          "textAlign": "start",
+          "lineHeight": "22.5px"
+        }
+      },
+      {
+        "text": "070 8739 7046",
+        "className": "no-btn no-btn-text",
+        "tagName": "a",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgba(255, 255, 255, 0.7)",
+          "fontSize": "20px",
+          "fontWeight": "400",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgba(255, 255, 255, 0.7)",
+          "boxShadow": "none",
+          "display": "inline-flex",
+          "textAlign": "start",
+          "lineHeight": "22.5px"
+        }
+      },
+      {
+        "text": "프로젝트 문의",
+        "className": "no-btn no-btn--white-outline no-btn-click no-btn-lg",
+        "tagName": "a",
+        "styles": {
+          "backgroundColor": "rgb(102, 53, 240)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "20px",
+          "fontWeight": "400",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "40px",
+          "border": "2px solid rgb(255, 255, 255)",
+          "boxShadow": "none",
+          "display": "flex",
+          "textAlign": "start",
+          "lineHeight": "22.5px"
+        }
+      },
+      {
+        "text": "About",
+        "className": "no-btn-text",
+        "tagName": "a",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "18px",
+          "fontWeight": "400",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(255, 255, 255)",
+          "boxShadow": "none",
+          "display": "inline-flex",
+          "textAlign": "left",
+          "lineHeight": "20.25px"
+        }
+      },
+      {
+        "text": "Projects",
+        "className": "no-btn-text",
+        "tagName": "a",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "18px",
+          "fontWeight": "400",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(255, 255, 255)",
+          "boxShadow": "none",
+          "display": "inline-flex",
+          "textAlign": "left",
+          "lineHeight": "20.25px"
+        }
+      },
+      {
+        "text": "Services",
+        "className": "no-btn-text",
+        "tagName": "a",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "18px",
+          "fontWeight": "400",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(255, 255, 255)",
+          "boxShadow": "none",
+          "display": "inline-flex",
+          "textAlign": "left",
+          "lineHeight": "20.25px"
+        }
+      },
+      {
+        "text": "Support",
+        "className": "no-btn-text",
+        "tagName": "a",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "18px",
+          "fontWeight": "400",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(255, 255, 255)",
+          "boxShadow": "none",
+          "display": "inline-flex",
+          "textAlign": "left",
+          "lineHeight": "20.25px"
+        }
+      },
+      {
+        "text": "모달닫기",
+        "className": "",
+        "tagName": "button",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "20px",
+          "fontWeight": "400",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "50%",
+          "border": "0px none rgb(0, 0, 0)",
+          "boxShadow": "none",
+          "display": "block",
+          "textAlign": "center",
+          "lineHeight": "23px"
+        }
+      },
+      {
+        "text": "사이트 주소 복사",
+        "className": "project-modal__copy",
+        "tagName": "button",
+        "styles": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "padding": "8px 16px",
+          "margin": "0px",
+          "borderRadius": "55px",
+          "border": "1px solid rgba(0, 0, 0, 0.1)",
+          "boxShadow": "none",
+          "display": "flex",
+          "textAlign": "center",
+          "lineHeight": "18.4px"
+        }
+      },
+      {
+        "text": "상세정보",
+        "className": "active",
+        "tagName": "button",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(102, 53, 240)",
+          "fontSize": "16px",
+          "fontWeight": "600",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "",
+          "boxShadow": "none",
+          "display": "flex",
+          "textAlign": "center",
+          "lineHeight": "18.4px"
+        }
+      },
+      {
+        "text": "사이트 보기",
+        "className": "",
+        "tagName": "button",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(153, 153, 153)",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(153, 153, 153)",
+          "boxShadow": "none",
+          "display": "flex",
+          "textAlign": "center",
+          "lineHeight": "18.4px"
+        }
+      },
+      {
+        "text": "",
+        "className": "prj-btn",
+        "tagName": "button",
+        "styles": {
+          "backgroundColor": "rgb(235, 235, 235)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "20px",
+          "fontWeight": "400",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "50%",
+          "border": "0px none rgb(0, 0, 0)",
+          "boxShadow": "none",
+          "display": "flex",
+          "textAlign": "center",
+          "lineHeight": "23px"
+        }
+      },
+      {
+        "text": "프로젝트 문의",
+        "className": "no-btn no-btn--primary no-btn-click no-btn-sm inquiry-btn",
+        "tagName": "a",
+        "styles": {
+          "backgroundColor": "rgb(102, 53, 240)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "20px",
+          "fontWeight": "400",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "40px",
+          "border": "0px none rgb(255, 255, 255)",
+          "boxShadow": "none",
+          "display": "flex",
+          "textAlign": "start",
+          "lineHeight": "22.5px"
+        }
+      },
+      {
+        "text": "",
+        "className": "prj-btn",
+        "tagName": "button",
+        "styles": {
+          "backgroundColor": "rgb(235, 235, 235)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "20px",
+          "fontWeight": "400",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "50%",
+          "border": "0px none rgb(0, 0, 0)",
+          "boxShadow": "none",
+          "display": "flex",
+          "textAlign": "center",
+          "lineHeight": "23px"
+        }
+      },
+      {
+        "text": "",
+        "className": "prj-btn",
+        "tagName": "button",
+        "styles": {
+          "backgroundColor": "rgb(235, 235, 235)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "20px",
+          "fontWeight": "400",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "50%",
+          "border": "0px none rgb(0, 0, 0)",
+          "boxShadow": "none",
+          "display": "flex",
+          "textAlign": "center",
+          "lineHeight": "23px"
+        }
+      },
+      {
+        "text": "TOP",
+        "className": "",
+        "tagName": "button",
+        "styles": {
+          "backgroundColor": "rgb(102, 53, 240)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "20px",
+          "fontWeight": "400",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "50%",
+          "border": "0px none rgb(0, 0, 0)",
+          "boxShadow": "none",
+          "display": "flex",
+          "textAlign": "center",
+          "lineHeight": "23px"
+        }
+      }
+    ],
+    "cards": [
+      {
+        "className": "no-main-vis__inner",
+        "tagName": "div",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(14, 14, 14)",
+          "fontSize": "20px",
+          "fontWeight": "400",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(14, 14, 14)",
+          "boxShadow": "none",
+          "display": "block",
+          "textAlign": "start",
+          "lineHeight": "22.5px"
+        }
+      },
+      {
+        "className": "no-prjIntro__inner",
+        "tagName": "div",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(14, 14, 14)",
+          "fontSize": "20px",
+          "fontWeight": "400",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(14, 14, 14)",
+          "boxShadow": "none",
+          "display": "flex",
+          "textAlign": "start",
+          "lineHeight": "22.5px"
+        }
+      },
+      {
+        "className": "pin-spacer pin-spacer-prj",
+        "tagName": "div",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(14, 14, 14)",
+          "fontSize": "20px",
+          "fontWeight": "400",
+          "padding": "0px 0px 34703px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(14, 14, 14)",
+          "boxShadow": "none",
+          "display": "block",
+          "textAlign": "start",
+          "lineHeight": "22.5px"
+        }
+      },
+      {
+        "className": "no-marquee__container",
+        "tagName": "div",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(14, 14, 14)",
+          "fontSize": "20px",
+          "fontWeight": "400",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(14, 14, 14)",
+          "boxShadow": "none",
+          "display": "flex",
+          "textAlign": "start",
+          "lineHeight": "22.5px"
+        }
+      },
+      {
+        "className": "no-main-contact__inner",
+        "tagName": "div",
+        "styles": {
+          "backgroundColor": "rgb(0, 0, 0)",
+          "color": "rgb(14, 14, 14)",
+          "fontSize": "20px",
+          "fontWeight": "400",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(14, 14, 14)",
+          "boxShadow": "none",
+          "display": "block",
+          "textAlign": "start",
+          "lineHeight": "22.5px"
+        }
+      },
+      {
+        "className": "project-modal__block project-modal__block--content active",
+        "tagName": "div",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(0, 0, 0)",
+          "boxShadow": "none",
+          "display": "block",
+          "textAlign": "start",
+          "lineHeight": "18px"
+        }
+      },
+      {
+        "className": "project-modal__block project-modal__block--iframe",
+        "tagName": "div",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "padding": "0px",
+          "margin": "0px 0px 40px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(0, 0, 0)",
+          "boxShadow": "none",
+          "display": "none",
+          "textAlign": "start",
+          "lineHeight": "18px"
+        }
+      }
+    ],
+    "navigation": [
+      {
+        "text": "나인원랩스",
+        "className": "",
+        "href": "https://www.nineonelabs.co.kr/",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(14, 14, 14)",
+          "fontSize": "40px",
+          "fontWeight": "400",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(14, 14, 14)",
+          "boxShadow": "none",
+          "display": "flex",
+          "textAlign": "start",
+          "lineHeight": "45px"
+        }
+      },
+      {
+        "text": "회사소개",
+        "className": "no-gnb__link no-btn no-btn-text",
+        "href": "https://www.nineonelabs.co.kr/pages/company.php",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(14, 14, 14)",
+          "fontSize": "18px",
+          "fontWeight": "600",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(14, 14, 14)",
+          "boxShadow": "none",
+          "display": "inline-flex",
+          "textAlign": "left",
+          "lineHeight": "20.25px"
+        }
+      },
+      {
+        "text": "프로젝트",
+        "className": "no-gnb__link no-btn no-btn-text",
+        "href": "https://www.nineonelabs.co.kr/pages/board/board.list.php?board_no=71",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(14, 14, 14)",
+          "fontSize": "18px",
+          "fontWeight": "600",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(14, 14, 14)",
+          "boxShadow": "none",
+          "display": "inline-flex",
+          "textAlign": "left",
+          "lineHeight": "20.25px"
+        }
+      },
+      {
+        "text": "서비스",
+        "className": "no-gnb__link no-btn no-btn-text",
+        "href": "https://www.nineonelabs.co.kr/pages/service.php",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(14, 14, 14)",
+          "fontSize": "18px",
+          "fontWeight": "600",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(14, 14, 14)",
+          "boxShadow": "none",
+          "display": "inline-flex",
+          "textAlign": "left",
+          "lineHeight": "20.25px"
+        }
+      },
+      {
+        "text": "고객센터",
+        "className": "no-gnb__link no-btn no-btn-text",
+        "href": "https://www.nineonelabs.co.kr/pages/board/board.list.php?board_no=70",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(14, 14, 14)",
+          "fontSize": "18px",
+          "fontWeight": "600",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(14, 14, 14)",
+          "boxShadow": "none",
+          "display": "inline-flex",
+          "textAlign": "left",
+          "lineHeight": "20.25px"
+        }
+      },
+      {
+        "text": "프로젝트 문의",
+        "className": "no-btn no-btn--primary no-btn-click no-btn-sm",
+        "href": "https://www.nineonelabs.co.kr/pages/contact.php",
+        "styles": {
+          "backgroundColor": "rgb(102, 53, 240)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "20px",
+          "fontWeight": "400",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "40px",
+          "border": "0px none rgb(255, 255, 255)",
+          "boxShadow": "none",
+          "display": "flex",
+          "textAlign": "start",
+          "lineHeight": "22.5px"
+        }
+      },
+      {
+        "text": "회사소개회사소개",
+        "className": "no-drawer__menu-link no-btn-text",
+        "href": "https://www.nineonelabs.co.kr/pages/company.php",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "64px",
+          "fontWeight": "700",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(255, 255, 255)",
+          "boxShadow": "none",
+          "display": "inline-block",
+          "textAlign": "left",
+          "lineHeight": "80px"
+        }
+      },
+      {
+        "text": "프로젝트프로젝트",
+        "className": "no-drawer__menu-link no-btn-text",
+        "href": "https://www.nineonelabs.co.kr/pages/board/board.list.php?board_no=71",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "64px",
+          "fontWeight": "700",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(255, 255, 255)",
+          "boxShadow": "none",
+          "display": "inline-block",
+          "textAlign": "left",
+          "lineHeight": "80px"
+        }
+      },
+      {
+        "text": "서비스서비스",
+        "className": "no-drawer__menu-link no-btn-text",
+        "href": "https://www.nineonelabs.co.kr/pages/service.php",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "64px",
+          "fontWeight": "700",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(255, 255, 255)",
+          "boxShadow": "none",
+          "display": "inline-block",
+          "textAlign": "left",
+          "lineHeight": "80px"
+        }
+      },
+      {
+        "text": "고객센터고객센터",
+        "className": "no-drawer__menu-link no-btn-text",
+        "href": "https://www.nineonelabs.co.kr/pages/board/board.list.php?board_no=70",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "64px",
+          "fontWeight": "700",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(255, 255, 255)",
+          "boxShadow": "none",
+          "display": "inline-block",
+          "textAlign": "left",
+          "lineHeight": "80px"
+        }
+      },
+      {
+        "text": "프로젝트 문의프로젝트 문의",
+        "className": "no-drawer__menu-link no-btn-text",
+        "href": "https://www.nineonelabs.co.kr/pages/contact.php",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(252, 240, 18)",
+          "fontSize": "64px",
+          "fontWeight": "700",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(252, 240, 18)",
+          "boxShadow": "none",
+          "display": "inline-block",
+          "textAlign": "left",
+          "lineHeight": "80px"
+        }
+      },
+      {
+        "text": "사이트 바로가기",
+        "className": "project-modal__link",
+        "href": "https://www.nineonelabs.co.kr/#",
+        "styles": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "padding": "8px 16px",
+          "margin": "0px",
+          "borderRadius": "55px",
+          "border": "1px solid rgba(0, 0, 0, 0.1)",
+          "boxShadow": "none",
+          "display": "flex",
+          "textAlign": "start",
+          "lineHeight": "18px"
+        }
+      }
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "나인원랩스",
+        "className": "no-logo no-logo--header",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(14, 14, 14)",
+          "fontSize": "40px",
+          "fontWeight": "400",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(14, 14, 14)",
+          "boxShadow": "none",
+          "display": "block",
+          "textAlign": "start",
+          "lineHeight": "45px"
+        }
+      },
+      {
+        "tag": "h2",
+        "text": "Where CreativityMeets Technology",
+        "className": "no-main-vis__hero-title no-en  no-en no-section-title--big",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(14, 14, 14)",
+          "fontSize": "96px",
+          "fontWeight": "700",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(14, 14, 14)",
+          "boxShadow": "none",
+          "display": "block",
+          "textAlign": "center",
+          "lineHeight": "108px"
+        }
+      },
+      {
+        "tag": "h3",
+        "text": "Creative\n                  Technology\n            ",
+        "className": "no-main-vis__intro-title no-en no-section-title--big",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(14, 14, 14)",
+          "fontSize": "96px",
+          "fontWeight": "700",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(14, 14, 14)",
+          "boxShadow": "none",
+          "display": "block",
+          "textAlign": "start",
+          "lineHeight": "108px"
+        }
+      },
+      {
+        "tag": "h2",
+        "text": "Projects",
+        "className": "no-en no-section-title--big",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(14, 14, 14)",
+          "fontSize": "96px",
+          "fontWeight": "700",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(14, 14, 14)",
+          "boxShadow": "none",
+          "display": "block",
+          "textAlign": "start",
+          "lineHeight": "108px"
+        }
+      },
+      {
+        "tag": "h3",
+        "text": "한컴독스 AI 사이트 리뉴얼",
+        "className": "no-section-title--big",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "96px",
+          "fontWeight": "700",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(255, 255, 255)",
+          "boxShadow": "none",
+          "display": "block",
+          "textAlign": "left",
+          "lineHeight": "108px"
+        }
+      },
+      {
+        "tag": "h3",
+        "text": "블루스퀘어 사이트 리뉴얼",
+        "className": "no-section-title--big",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "96px",
+          "fontWeight": "700",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(255, 255, 255)",
+          "boxShadow": "none",
+          "display": "block",
+          "textAlign": "left",
+          "lineHeight": "108px"
+        }
+      },
+      {
+        "tag": "h3",
+        "text": "Palette 사이트 리뉴얼",
+        "className": "no-section-title--big",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "96px",
+          "fontWeight": "700",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(255, 255, 255)",
+          "boxShadow": "none",
+          "display": "block",
+          "textAlign": "left",
+          "lineHeight": "108px"
+        }
+      },
+      {
+        "tag": "h3",
+        "text": "Chemicum 웹사이트 구축",
+        "className": "no-section-title--big",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "96px",
+          "fontWeight": "700",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(255, 255, 255)",
+          "boxShadow": "none",
+          "display": "block",
+          "textAlign": "left",
+          "lineHeight": "108px"
+        }
+      },
+      {
+        "tag": "h3",
+        "text": "Eversys 글로벌 사이트 구축",
+        "className": "no-section-title--big",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "96px",
+          "fontWeight": "700",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(255, 255, 255)",
+          "boxShadow": "none",
+          "display": "block",
+          "textAlign": "left",
+          "lineHeight": "108px"
+        }
+      },
+      {
+        "tag": "h3",
+        "text": "도루코 리뉴얼",
+        "className": "no-section-title--big",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "96px",
+          "fontWeight": "700",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(255, 255, 255)",
+          "boxShadow": "none",
+          "display": "block",
+          "textAlign": "left",
+          "lineHeight": "108px"
+        }
+      },
+      {
+        "tag": "h3",
+        "text": "Scotsman 브랜드 사이트 구축",
+        "className": "no-section-title--big",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "96px",
+          "fontWeight": "700",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(255, 255, 255)",
+          "boxShadow": "none",
+          "display": "block",
+          "textAlign": "left",
+          "lineHeight": "108px"
+        }
+      },
+      {
+        "tag": "h3",
+        "text": "하나자산운용",
+        "className": "no-section-title--big",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "96px",
+          "fontWeight": "700",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(255, 255, 255)",
+          "boxShadow": "none",
+          "display": "block",
+          "textAlign": "left",
+          "lineHeight": "108px"
+        }
+      },
+      {
+        "tag": "h3",
+        "text": "도루코리빙",
+        "className": "no-section-title--big",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "96px",
+          "fontWeight": "700",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(255, 255, 255)",
+          "boxShadow": "none",
+          "display": "block",
+          "textAlign": "left",
+          "lineHeight": "108px"
+        }
+      },
+      {
+        "tag": "h3",
+        "text": "도루코글로벌 리뉴얼",
+        "className": "no-section-title--big",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "96px",
+          "fontWeight": "700",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(255, 255, 255)",
+          "boxShadow": "none",
+          "display": "block",
+          "textAlign": "left",
+          "lineHeight": "108px"
+        }
+      },
+      {
+        "tag": "h2",
+        "text": "Contact",
+        "className": "no-blind",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(14, 14, 14)",
+          "fontSize": "20px",
+          "fontWeight": "400",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(14, 14, 14)",
+          "boxShadow": "none",
+          "display": "block",
+          "textAlign": "start",
+          "lineHeight": "22.5px"
+        }
+      },
+      {
+        "tag": "h3",
+        "text": "지금 프로젝트를 문의하세요.",
+        "className": "no-main-contact__inquiry no-section-title--1",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "64px",
+          "fontWeight": "700",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(255, 255, 255)",
+          "boxShadow": "none",
+          "display": "block",
+          "textAlign": "center",
+          "lineHeight": "72px"
+        }
+      },
+      {
+        "tag": "h2",
+        "text": "개인정보 수집 및 이용에 대한 안내",
+        "className": "",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(14, 14, 14)",
+          "fontSize": "36px",
+          "fontWeight": "700",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(14, 14, 14)",
+          "boxShadow": "none",
+          "display": "block",
+          "textAlign": "start",
+          "lineHeight": "47.988px"
+        }
+      },
+      {
+        "tag": "h3",
+        "text": "1. 개인정보 수집 및 이용 목적",
+        "className": "",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(14, 14, 14)",
+          "fontSize": "32px",
+          "fontWeight": "500",
+          "padding": "0px",
+          "margin": "60px 0px 0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(14, 14, 14)",
+          "boxShadow": "none",
+          "display": "block",
+          "textAlign": "start",
+          "lineHeight": "42.656px"
+        }
+      },
+      {
+        "tag": "h3",
+        "text": "2. 수집하는 개인정보의 항목 및 수집방법",
+        "className": "",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(14, 14, 14)",
+          "fontSize": "32px",
+          "fontWeight": "500",
+          "padding": "0px",
+          "margin": "60px 0px 0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(14, 14, 14)",
+          "boxShadow": "none",
+          "display": "block",
+          "textAlign": "start",
+          "lineHeight": "42.656px"
+        }
+      },
+      {
+        "tag": "h3",
+        "text": "3. 개인정보의 제3자 제공",
+        "className": "",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(14, 14, 14)",
+          "fontSize": "32px",
+          "fontWeight": "500",
+          "padding": "0px",
+          "margin": "60px 0px 0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(14, 14, 14)",
+          "boxShadow": "none",
+          "display": "block",
+          "textAlign": "start",
+          "lineHeight": "42.656px"
+        }
+      },
+      {
+        "tag": "h3",
+        "text": "4. 개인정보의 보유 및 이용기간",
+        "className": "",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(14, 14, 14)",
+          "fontSize": "32px",
+          "fontWeight": "500",
+          "padding": "0px",
+          "margin": "60px 0px 0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(14, 14, 14)",
+          "boxShadow": "none",
+          "display": "block",
+          "textAlign": "start",
+          "lineHeight": "42.656px"
+        }
+      },
+      {
+        "tag": "h3",
+        "text": "5. 개인정보 파기절차와 방법",
+        "className": "",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(14, 14, 14)",
+          "fontSize": "32px",
+          "fontWeight": "500",
+          "padding": "0px",
+          "margin": "60px 0px 0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(14, 14, 14)",
+          "boxShadow": "none",
+          "display": "block",
+          "textAlign": "start",
+          "lineHeight": "42.656px"
+        }
+      },
+      {
+        "tag": "h3",
+        "text": "6. 이용자의 권리, 의무 및 행사방법",
+        "className": "",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(14, 14, 14)",
+          "fontSize": "32px",
+          "fontWeight": "500",
+          "padding": "0px",
+          "margin": "60px 0px 0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(14, 14, 14)",
+          "boxShadow": "none",
+          "display": "block",
+          "textAlign": "start",
+          "lineHeight": "42.656px"
+        }
+      },
+      {
+        "tag": "h3",
+        "text": "7. 개인정보의 기술적/관리적 보호 대책",
+        "className": "",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(14, 14, 14)",
+          "fontSize": "32px",
+          "fontWeight": "500",
+          "padding": "0px",
+          "margin": "60px 0px 0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(14, 14, 14)",
+          "boxShadow": "none",
+          "display": "block",
+          "textAlign": "start",
+          "lineHeight": "42.656px"
+        }
+      },
+      {
+        "tag": "h3",
+        "text": "설정 방법의 예",
+        "className": "",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(14, 14, 14)",
+          "fontSize": "32px",
+          "fontWeight": "500",
+          "padding": "0px",
+          "margin": "60px 0px 0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(14, 14, 14)",
+          "boxShadow": "none",
+          "display": "block",
+          "textAlign": "start",
+          "lineHeight": "42.656px"
+        }
+      },
+      {
+        "tag": "h3",
+        "text": "9. 개인정보보호 담당자",
+        "className": "",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(14, 14, 14)",
+          "fontSize": "32px",
+          "fontWeight": "500",
+          "padding": "0px",
+          "margin": "60px 0px 0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(14, 14, 14)",
+          "boxShadow": "none",
+          "display": "block",
+          "textAlign": "start",
+          "lineHeight": "42.656px"
+        }
+      },
+      {
+        "tag": "h3",
+        "text": "10. 기타 부가방침",
+        "className": "",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(14, 14, 14)",
+          "fontSize": "32px",
+          "fontWeight": "500",
+          "padding": "0px",
+          "margin": "60px 0px 0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(14, 14, 14)",
+          "boxShadow": "none",
+          "display": "block",
+          "textAlign": "start",
+          "lineHeight": "42.656px"
+        }
+      },
+      {
+        "tag": "h4",
+        "text": "",
+        "className": "",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "48px",
+          "fontWeight": "600",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "border": "0px none rgb(0, 0, 0)",
+          "boxShadow": "none",
+          "display": "block",
+          "textAlign": "center",
+          "lineHeight": "54px"
+        }
+      }
+    ],
+    "spacing": []
+  },
+  "layout": {
+    "containers": [
+      {
+        "className": "no-drawer__inner no-container",
+        "maxWidth": "1440px",
+        "width": "1440px",
+        "margin": "0px 240px",
+        "padding": "0px 24px",
+        "display": "flex",
+        "flexDirection": "row",
+        "justifyContent": "normal",
+        "alignItems": "center",
+        "gridTemplateColumns": "none"
+      },
+      {
+        "className": "no-marquee__container",
+        "maxWidth": "none",
+        "width": "1920px",
+        "margin": "0px",
+        "padding": "0px",
+        "display": "flex",
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "alignItems": "center",
+        "gridTemplateColumns": "none"
+      },
+      {
+        "className": "no-container",
+        "maxWidth": "1440px",
+        "width": "1440px",
+        "margin": "0px",
+        "padding": "0px 24px",
+        "display": "flex",
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "alignItems": "center",
+        "gridTemplateColumns": "none"
+      },
+      {
+        "className": "no-container no-footer__inner",
+        "maxWidth": "1440px",
+        "width": "1440px",
+        "margin": "0px 240px",
+        "padding": "0px 24px",
+        "display": "flex",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "alignItems": "center",
+        "gridTemplateColumns": "none"
+      },
+      {
+        "className": "project-modal__container",
+        "maxWidth": "none",
+        "width": "1282px",
+        "margin": "0px",
+        "padding": "0px",
+        "display": "block",
+        "flexDirection": "row",
+        "justifyContent": "normal",
+        "alignItems": "normal",
+        "gridTemplateColumns": "none"
+      },
+      {
+        "className": "container-prj-modal container-prj-modal",
+        "maxWidth": "1140px",
+        "width": "1140px",
+        "margin": "0px 71px",
+        "padding": "0px 24px",
+        "display": "block",
+        "flexDirection": "row",
+        "justifyContent": "normal",
+        "alignItems": "normal",
+        "gridTemplateColumns": "none"
+      },
+      {
+        "className": "project-modal__content container-prj-modal",
+        "maxWidth": "1140px",
+        "width": "1140px",
+        "margin": "0px 71px",
+        "padding": "0px 24px",
+        "display": "block",
+        "flexDirection": "row",
+        "justifyContent": "normal",
+        "alignItems": "normal",
+        "gridTemplateColumns": "none"
+      },
+      {
+        "className": "container-prj-modal project-modal__footer",
+        "maxWidth": "1140px",
+        "width": "1140px",
+        "margin": "0px 71px",
+        "padding": "0px 24px",
+        "display": "block",
+        "flexDirection": "row",
+        "justifyContent": "normal",
+        "alignItems": "normal",
+        "gridTemplateColumns": "none"
+      }
+    ],
+    "flexGridElements": [
+      {
+        "tagName": "div",
+        "className": "transition__intro",
+        "display": "flex",
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "alignItems": "center",
+        "gap": "normal",
+        "gridTemplateColumns": "none",
+        "gridTemplateRows": "none"
+      },
+      {
+        "tagName": "div",
+        "className": "no-about-intro__text",
+        "display": "flex",
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "alignItems": "center",
+        "gap": "normal",
+        "gridTemplateColumns": "none",
+        "gridTemplateRows": "none"
+      },
+      {
+        "tagName": "div",
+        "className": "no-about-intro__text",
+        "display": "flex",
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "alignItems": "center",
+        "gap": "normal",
+        "gridTemplateColumns": "none",
+        "gridTemplateRows": "none"
+      },
+      {
+        "tagName": "div",
+        "className": "no-about-intro__text",
+        "display": "flex",
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "alignItems": "center",
+        "gap": "normal",
+        "gridTemplateColumns": "none",
+        "gridTemplateRows": "none"
+      },
+      {
+        "tagName": "div",
+        "className": "no-about-intro__text",
+        "display": "flex",
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "alignItems": "center",
+        "gap": "normal",
+        "gridTemplateColumns": "none",
+        "gridTemplateRows": "none"
+      },
+      {
+        "tagName": "div",
+        "className": "no-header__inner",
+        "display": "flex",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "alignItems": "center",
+        "gap": "normal",
+        "gridTemplateColumns": "none",
+        "gridTemplateRows": "none"
+      },
+      {
+        "tagName": "a",
+        "className": "",
+        "display": "flex",
+        "flexDirection": "row",
+        "justifyContent": "normal",
+        "alignItems": "normal",
+        "gap": "normal",
+        "gridTemplateColumns": "none",
+        "gridTemplateRows": "none"
+      },
+      {
+        "tagName": "div",
+        "className": "no-header__right",
+        "display": "flex",
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "alignItems": "center",
+        "gap": "40px",
+        "gridTemplateColumns": "none",
+        "gridTemplateRows": "none"
+      },
+      {
+        "tagName": "ul",
+        "className": "no-gnb",
+        "display": "flex",
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "alignItems": "center",
+        "gap": "36px",
+        "gridTemplateColumns": "none",
+        "gridTemplateRows": "none"
+      },
+      {
+        "tagName": "div",
+        "className": "no-header__side",
+        "display": "flex",
+        "flexDirection": "row",
+        "justifyContent": "normal",
+        "alignItems": "center",
+        "gap": "40px",
+        "gridTemplateColumns": "none",
+        "gridTemplateRows": "none"
+      },
+      {
+        "tagName": "a",
+        "className": "no-btn no-btn--primary no-btn-click no-btn-sm",
+        "display": "flex",
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "alignItems": "center",
+        "gap": "normal",
+        "gridTemplateColumns": "none",
+        "gridTemplateRows": "none"
+      },
+      {
+        "tagName": "span",
+        "className": "no-btn-click__text",
+        "display": "flex",
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "alignItems": "center",
+        "gap": "normal",
+        "gridTemplateColumns": "none",
+        "gridTemplateRows": "none"
+      },
+      {
+        "tagName": "aside",
+        "className": "no-drawer",
+        "display": "flex",
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "alignItems": "center",
+        "gap": "normal",
+        "gridTemplateColumns": "none",
+        "gridTemplateRows": "none"
+      },
+      {
+        "tagName": "div",
+        "className": "no-drawer__inner no-container",
+        "display": "flex",
+        "flexDirection": "row",
+        "justifyContent": "normal",
+        "alignItems": "center",
+        "gap": "normal",
+        "gridTemplateColumns": "none",
+        "gridTemplateRows": "none"
+      },
+      {
+        "tagName": "nav",
+        "className": "no-drawer__nav",
+        "display": "flex",
+        "flexDirection": "row",
+        "justifyContent": "normal",
+        "alignItems": "center",
+        "gap": "normal",
+        "gridTemplateColumns": "none",
+        "gridTemplateRows": "none"
+      },
+      {
+        "tagName": "ul",
+        "className": "no-drawer__menu",
+        "display": "flex",
+        "flexDirection": "column",
+        "justifyContent": "normal",
+        "alignItems": "normal",
+        "gap": "normal",
+        "gridTemplateColumns": "none",
+        "gridTemplateRows": "none"
+      },
+      {
+        "tagName": "span",
+        "className": "no-drawer__project-count",
+        "display": "flex",
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "alignItems": "center",
+        "gap": "normal",
+        "gridTemplateColumns": "none",
+        "gridTemplateRows": "none"
+      },
+      {
+        "tagName": "div",
+        "className": "no-drawer__address",
+        "display": "flex",
+        "flexDirection": "column",
+        "justifyContent": "normal",
+        "alignItems": "normal",
+        "gap": "40px",
+        "gridTemplateColumns": "none",
+        "gridTemplateRows": "none"
+      },
+      {
+        "tagName": "div",
+        "className": "no-drawer__address__block",
+        "display": "flex",
+        "flexDirection": "column",
+        "justifyContent": "normal",
+        "alignItems": "normal",
+        "gap": "8px",
+        "gridTemplateColumns": "none",
+        "gridTemplateRows": "none"
+      },
+      {
+        "tagName": "p",
+        "className": "no-drawer__address__list",
+        "display": "flex",
+        "flexDirection": "column",
+        "justifyContent": "normal",
+        "alignItems": "normal",
+        "gap": "4px",
+        "gridTemplateColumns": "none",
+        "gridTemplateRows": "none"
+      }
+    ]
+  }
+}

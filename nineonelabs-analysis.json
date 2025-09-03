@@ -1,0 +1,262 @@
+{
+  "timestamp": "2025-09-02T11:34:50.059Z",
+  "url": "https://www.nineonelabs.co.kr/",
+  "title": "나인원랩스",
+  "colors": [
+    "rgb(0, 0, 0)",
+    "rgb(255, 255, 255)",
+    "rgb(14, 14, 14)",
+    "rgb(252, 240, 18)",
+    "rgb(2, 170, 108)",
+    "rgb(102, 53, 240)",
+    "rgb(71, 38, 163)",
+    "rgba(255, 255, 255, 0.7)",
+    "rgba(255, 255, 255, 0.8)",
+    "rgba(222, 222, 222, 0.75)",
+    "rgba(0, 0, 0, 0.6)",
+    "rgba(0, 0, 0, 0.65)",
+    "rgba(0, 0, 0, 0.1)",
+    "rgb(0, 0, 0) rgb(0, 0, 0) rgb(215, 215, 215)",
+    "rgb(153, 153, 153)",
+    "rgb(235, 235, 235)"
+  ],
+  "typography": {
+    "families": [
+      "\"Times New Roman\"",
+      "NanumSquare, sans-serif",
+      "Archivo, sans-serif",
+      "\"Font Awesome 6 Pro\""
+    ],
+    "sizes": [
+      "10px",
+      "12px",
+      "13px",
+      "14px",
+      "16px",
+      "175px",
+      "18px",
+      "20px",
+      "24px",
+      "307.2px",
+      "32px",
+      "36px",
+      "40px",
+      "48px",
+      "64px",
+      "96px"
+    ],
+    "weights": [
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "900"
+    ]
+  },
+  "structure": {
+    "hasHeader": true,
+    "hasNav": true,
+    "hasMain": true,
+    "hasFooter": true,
+    "headerInfo": {
+      "tagName": "header",
+      "className": "no-header",
+      "id": "header",
+      "display": "block",
+      "position": "fixed",
+      "width": "1920px",
+      "height": "80px",
+      "margin": "0px",
+      "padding": "0px 25px"
+    },
+    "navInfo": {
+      "tagName": "nav",
+      "className": "no-header__nav",
+      "id": "",
+      "display": "block",
+      "position": "static",
+      "width": "353.734px",
+      "height": "22.5px",
+      "margin": "0px",
+      "padding": "0px"
+    },
+    "mainInfo": {
+      "tagName": "main",
+      "className": "",
+      "id": "main",
+      "display": "block",
+      "position": "static",
+      "width": "1920px",
+      "height": "50375px",
+      "margin": "0px",
+      "padding": "0px"
+    },
+    "footerInfo": {
+      "tagName": "footer",
+      "className": "no-footer",
+      "id": "footer",
+      "display": "block",
+      "position": "static",
+      "width": "1920px",
+      "height": "275.25px",
+      "margin": "0px",
+      "padding": "80px 0px"
+    }
+  },
+  "content": {
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "나인원랩스",
+        "className": "no-logo no-logo--header"
+      },
+      {
+        "tag": "h2",
+        "text": "Where CreativityMeets Technology",
+        "className": "no-main-vis__hero-title no-en  no-en no-section-title--big"
+      },
+      {
+        "tag": "h3",
+        "text": "Creative\n                  Technology\n                Innovation",
+        "className": "no-main-vis__intro-title no-en no-section-title--big"
+      },
+      {
+        "tag": "h2",
+        "text": "Projects",
+        "className": "no-en no-section-title--big"
+      },
+      {
+        "tag": "h3",
+        "text": "한컴독스 AI 사이트 리뉴얼",
+        "className": "no-section-title--big"
+      },
+      {
+        "tag": "h3",
+        "text": "블루스퀘어 사이트 리뉴얼",
+        "className": "no-section-title--big"
+      },
+      {
+        "tag": "h3",
+        "text": "Palette 사이트 리뉴얼",
+        "className": "no-section-title--big"
+      },
+      {
+        "tag": "h3",
+        "text": "Chemicum 웹사이트 구축",
+        "className": "no-section-title--big"
+      },
+      {
+        "tag": "h3",
+        "text": "Eversys 글로벌 사이트 구축",
+        "className": "no-section-title--big"
+      },
+      {
+        "tag": "h3",
+        "text": "도루코 리뉴얼",
+        "className": "no-section-title--big"
+      },
+      {
+        "tag": "h3",
+        "text": "Scotsman 브랜드 사이트 구축",
+        "className": "no-section-title--big"
+      },
+      {
+        "tag": "h3",
+        "text": "하나자산운용",
+        "className": "no-section-title--big"
+      },
+      {
+        "tag": "h3",
+        "text": "도루코리빙",
+        "className": "no-section-title--big"
+      },
+      {
+        "tag": "h3",
+        "text": "도루코글로벌 리뉴얼",
+        "className": "no-section-title--big"
+      },
+      {
+        "tag": "h2",
+        "text": "Contact",
+        "className": "no-blind"
+      },
+      {
+        "tag": "h3",
+        "text": "지금 프로젝트를 문의하세요.",
+        "className": "no-main-contact__inquiry no-section-title--1"
+      },
+      {
+        "tag": "h2",
+        "text": "개인정보 수집 및 이용에 대한 안내",
+        "className": ""
+      },
+      {
+        "tag": "h3",
+        "text": "1. 개인정보 수집 및 이용 목적",
+        "className": ""
+      },
+      {
+        "tag": "h3",
+        "text": "2. 수집하는 개인정보의 항목 및 수집방법",
+        "className": ""
+      },
+      {
+        "tag": "h3",
+        "text": "3. 개인정보의 제3자 제공",
+        "className": ""
+      },
+      {
+        "tag": "h3",
+        "text": "4. 개인정보의 보유 및 이용기간",
+        "className": ""
+      },
+      {
+        "tag": "h3",
+        "text": "5. 개인정보 파기절차와 방법",
+        "className": ""
+      },
+      {
+        "tag": "h3",
+        "text": "6. 이용자의 권리, 의무 및 행사방법",
+        "className": ""
+      },
+      {
+        "tag": "h3",
+        "text": "7. 개인정보의 기술적/관리적 보호 대책",
+        "className": ""
+      },
+      {
+        "tag": "h3",
+        "text": "설정 방법의 예",
+        "className": ""
+      },
+      {
+        "tag": "h3",
+        "text": "9. 개인정보보호 담당자",
+        "className": ""
+      },
+      {
+        "tag": "h3",
+        "text": "10. 기타 부가방침",
+        "className": ""
+      },
+      {
+        "tag": "h4",
+        "text": "",
+        "className": ""
+      }
+    ],
+    "navigation": [
+      "회사소개",
+      "프로젝트",
+      "서비스",
+      "고객센터",
+      "회사소개회사소개",
+      "프로젝트프로젝트",
+      "서비스서비스",
+      "고객센터고객센터",
+      "프로젝트 문의프로젝트 문의"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+# Development tools and scripts
+.claude/
+SuperClaude/
+*.local.*
+
+# Test and analysis scripts
+test-*.js
+analyze-*.js
+quick-*.js
+debug-*.js
+final-*.js
+detailed-*.js
+focused-*.js
+
+# Development directories
+scripts/
+viberaiden-homepage-deploy/
+
+# Temporary files
+*.png
+*.jpg
+*.jpeg
+*.json
+cookies*.txt
+nul

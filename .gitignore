@@ -40,14 +40,27 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# local-only tools and test/admin UIs
+# local-only tools and test UIs
 .claude/
 .claude.json
 Claude_Optiomize_Guide/
 SuperClaude/
 app/test/
 app/dev/
-app/admin/
 components/dev/
 scripts/local-*/
 *.local.*
+
+# Windows reserved device filenames that can appear accidentally
+# Prevents commit failures like "fatal: adding files failed" on Windows
+nul
+
+# Local admin tooling (not pushed)
+app/admin/
+
+# Local cookies/session dumps
+cookies*.txt
+
+# Internal docs with example secrets (excluded from repo)
+SOLAPI_GUIDE.md
+FEATURES/deployment-strategy.plan.md

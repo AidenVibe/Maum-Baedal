@@ -1,0 +1,187 @@
+{
+  "websiteAnalysis": {
+    "url": "https://www.nineonelabs.co.kr/",
+    "title": "나인원랩스",
+    "analyzedAt": "2025-09-02T11:34:50.059Z"
+  },
+  "designSystem": {
+    "colorPalette": {
+      "primary": {
+        "main": "rgb(102, 53, 240)",
+        "dark": "rgb(71, 38, 163)",
+        "description": "Purple brand color used for primary actions and highlights"
+      },
+      "secondary": {
+        "main": "rgb(2, 170, 108)",
+        "description": "Green accent color for secondary actions"
+      },
+      "accent": {
+        "yellow": "rgb(252, 240, 18)",
+        "description": "Bright yellow for special highlights and attention"
+      },
+      "neutral": {
+        "black": "rgb(0, 0, 0)",
+        "darkGray": "rgb(14, 14, 14)",
+        "mediumGray": "rgb(153, 153, 153)",
+        "lightGray": "rgb(235, 235, 235)",
+        "white": "rgb(255, 255, 255)"
+      },
+      "transparency": {
+        "whiteOverlay70": "rgba(255, 255, 255, 0.7)",
+        "whiteOverlay80": "rgba(255, 255, 255, 0.8)",
+        "grayOverlay75": "rgba(222, 222, 222, 0.75)",
+        "blackOverlay60": "rgba(0, 0, 0, 0.6)",
+        "blackOverlay65": "rgba(0, 0, 0, 0.65)",
+        "blackOverlay10": "rgba(0, 0, 0, 0.1)"
+      }
+    },
+    "typography": {
+      "fontFamilies": {
+        "primary": "NanumSquare, sans-serif",
+        "secondary": "Archivo, sans-serif",
+        "fallback": "Times New Roman",
+        "icons": "Font Awesome 6 Pro"
+      },
+      "fontSizes": {
+        "xs": "10px",
+        "sm": "12px",
+        "base": "14px",
+        "md": "16px",
+        "lg": "18px",
+        "xl": "20px",
+        "2xl": "24px",
+        "3xl": "32px",
+        "4xl": "36px",
+        "5xl": "40px",
+        "6xl": "48px",
+        "7xl": "64px",
+        "8xl": "96px",
+        "hero": "175px",
+        "superHero": "307.2px"
+      },
+      "fontWeights": {
+        "light": "300",
+        "normal": "400",
+        "medium": "500",
+        "semibold": "600",
+        "bold": "700",
+        "black": "900"
+      }
+    },
+    "spacing": {
+      "containerPadding": "25px",
+      "sectionPadding": "80px 0px",
+      "buttonBorderRadius": "40px"
+    },
+    "layout": {
+      "structure": {
+        "hasFixedHeader": true,
+        "headerHeight": "80px",
+        "headerPadding": "0px 25px",
+        "containerWidth": "1920px",
+        "footerPadding": "80px 0px"
+      },
+      "breakpoints": {
+        "desktop": "1920px",
+        "note": "Mobile breakpoints not detected in this analysis"
+      }
+    }
+  },
+  "componentPatterns": {
+    "buttons": {
+      "navigation": {
+        "backgroundColor": "transparent",
+        "color": "rgb(14, 14, 14)",
+        "fontSize": "18px",
+        "fontWeight": "600",
+        "padding": "0px",
+        "border": "none",
+        "borderRadius": "0px",
+        "display": "inline-flex",
+        "textAlign": "left",
+        "className": "no-gnb__link no-btn no-btn-text"
+      },
+      "primary": {
+        "backgroundColor": "rgb(102, 53, 240)",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "20px",
+        "fontWeight": "400",
+        "padding": "calculated",
+        "borderRadius": "40px",
+        "display": "flex",
+        "textAlign": "start",
+        "className": "no-btn no-btn--primary no-btn-click no-btn-sm"
+      }
+    },
+    "headings": {
+      "h1": {
+        "purpose": "Logo/Brand",
+        "className": "no-logo no-logo--header"
+      },
+      "h2": {
+        "purpose": "Section titles",
+        "className": "no-en no-section-title--big",
+        "examples": ["Where CreativityMeets Technology", "Projects", "Contact"]
+      },
+      "h3": {
+        "purpose": "Subsection titles",
+        "className": "no-section-title--big",
+        "examples": ["한컴독스 AI 사이트 리뉴얼", "블루스퀘어 사이트 리뉴얼"]
+      }
+    },
+    "navigation": {
+      "mainMenu": ["회사소개", "프로젝트", "서비스", "고객센터"],
+      "cta": "프로젝트 문의",
+      "style": {
+        "position": "fixed",
+        "height": "80px",
+        "backgroundColor": "white",
+        "fontSize": "18px",
+        "fontWeight": "600"
+      }
+    }
+  },
+  "interactionPatterns": {
+    "ctaButton": {
+      "text": "프로젝트 문의",
+      "style": "Primary button with purple background",
+      "borderRadius": "40px (fully rounded)"
+    },
+    "navigationHover": {
+      "detected": false,
+      "note": "Static analysis - hover effects would need dynamic testing"
+    }
+  },
+  "brandIdentity": {
+    "primaryBrand": "나인원랩스",
+    "tagline": "Where CreativityMeets Technology",
+    "keyMessages": [
+      "Creative Technology Innovation",
+      "지금 프로젝트를 문의하세요"
+    ],
+    "services": [
+      "사이트 리뉴얼",
+      "웹사이트 구축",
+      "브랜드 사이트 구축"
+    ]
+  },
+  "technicalNotes": {
+    "framework": "Not detected from static analysis",
+    "responsive": "Desktop-first detected (1920px width)",
+    "accessibility": "Not fully analyzed - would need detailed audit",
+    "performance": "Not measured in this analysis",
+    "seoStructure": {
+      "hasSemanticHTML": true,
+      "hasHeaderFooter": true,
+      "hasMainContent": true,
+      "hasNavigation": true
+    }
+  },
+  "recommendations": {
+    "colorSystem": "Well-defined color palette with clear hierarchy",
+    "typography": "Comprehensive font sizing system, good weight variety",
+    "layout": "Fixed-width design may need responsive considerations",
+    "components": "Consistent button patterns, clear navigation structure",
+    "brandConsistency": "Strong purple brand color throughout interface"
+  }
+}

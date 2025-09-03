@@ -40,7 +40,8 @@ export const hiddenNavRoutes = [
   '/',
   '/login',
   '/onboarding',
-  '/admin'
+  '/admin',
+  '/test/login-hybrid'  // 테스트 페이지도 네비게이션 숨김
 ]
 
 export function shouldShowNavigation(pathname: string): boolean {

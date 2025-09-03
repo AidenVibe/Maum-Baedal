@@ -1,0 +1,56 @@
+{
+  "project": {
+    "name": "마음배달 v2 (Dear_Q)",
+    "type": "next.js",
+    "language": "typescript",
+    "primary_language": "korean",
+    "optimization_level": "high"
+  },
+  "performance_settings": {
+    "token_optimization": {
+      "enabled": true,
+      "threshold": 150,
+      "korean_priority": true,
+      "auto_compression": true
+    },
+    "batch_operations": {
+      "enabled": true,
+      "parallel_api_calls": true,
+      "database_batch_queries": true
+    },
+    "context_management": {
+      "project_focus": "family_conversation_platform",
+      "key_patterns": [
+        "prisma",
+        "nextauth",
+        "korean_localization",
+        "gate_system",
+        "service_day_logic"
+      ]
+    }
+  },
+  "development_preferences": {
+    "response_language": "korean",
+    "code_comments": "english", 
+    "error_messages": "korean_user_friendly",
+    "optimization_priority": [
+      "performance",
+      "accessibility", 
+      "security",
+      "maintainability"
+    ]
+  },
+  "project_specific_rules": {
+    "gate_system_priority": true,
+    "korean_family_context": true,
+    "privacy_minimal_collection": true,
+    "mobile_first_design": true
+  },
+  "integration_status": {
+    "universal_optimizer": true,
+    "custom_commands": true,
+    "performance_monitoring": true,
+    "tree_of_thoughts": true,
+    "installed_at": "2025-08-28T13:49:52+09:00"
+  }
+}

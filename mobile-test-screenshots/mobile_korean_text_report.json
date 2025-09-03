@@ -1,0 +1,626 @@
+[
+  {
+    "device": "iPhone SE",
+    "viewport": "375x667",
+    "heroText": {
+      "subtitle": {
+        "text": "사람들이 느끼지만, 말하지 않는",
+        "width": 320,
+        "height": 78.39583587646484,
+        "lineHeight": "39.2px",
+        "wordBreak": "keep-all",
+        "overflowWrap": "break-word",
+        "lineBreak": "strict",
+        "fontSize": "28px",
+        "lines": 2
+      },
+      "main": {
+        "text": "불편함을 정의하는 기획자",
+        "width": 320,
+        "height": 100.79167175292969,
+        "lineHeight": "50.4px",
+        "wordBreak": "keep-all",
+        "overflowWrap": "break-word",
+        "lineBreak": "strict",
+        "fontSize": "36px",
+        "lines": 2
+      },
+      "description": {
+        "text": "일상 속 작은 불편함에서 시작해\n                세상을 조금 더 따뜻하게 만드는 서비스를 만듭니다",
+        "width": 320,
+        "height": 102,
+        "lineHeight": "34px",
+        "wordBreak": "keep-all",
+        "overflowWrap": "break-word",
+        "lineBreak": "auto",
+        "fontSize": "20px",
+        "lines": 3
+      }
+    },
+    "problemText": [
+      {
+        "index": 0,
+        "title": {
+          "text": "\"효도하고 싶지만 어떻게 해야 할지 모르겠어요\"...",
+          "wordBreak": "keep-all",
+          "overflowWrap": "break-word",
+          "textAlign": "start",
+          "lineHeight": "42px"
+        },
+        "description": {
+          "text": "부모님께 안부 전화를 드리고 싶은 마음은 간절하지만, 막상 전화를 걸면 \"안녕하세요\" 다음에 무슨 말을 해야 할지 막막합니다.\n                        우리는 분...",
+          "wordBreak": "keep-all",
+          "overflowWrap": "break-word",
+          "textAlign": "left",
+          "lineHeight": "28.8px"
+        }
+      },
+      {
+        "index": 1,
+        "title": {
+          "text": "\"언젠가 함께 하자고 하는데 언제인지 모르겠어요\"...",
+          "wordBreak": "keep-all",
+          "overflowWrap": "break-word",
+          "textAlign": "start",
+          "lineHeight": "42px"
+        },
+        "description": {
+          "text": "사랑하는 사람과 함께 하고 싶은 것들을 노트에 적어보지만, 시간이 지나고 보면 그대로 말이죠. '언젠가 해야지'라는 말이 '언제인지 모르겠어'로 바뀍니다.\n             ...",
+          "wordBreak": "keep-all",
+          "overflowWrap": "break-word",
+          "textAlign": "left",
+          "lineHeight": "28.8px"
+        }
+      }
+    ],
+    "solutionText": {
+      "description": {
+        "text": "매일 아침, 부모님과 나에게 같은 질문이 도착합니다.\n                        \"오늘 가장 기분 좋았던 순간은?\" 같은 따뜻한 질문에 서로 답하면,\n                        듣고 싶었던 이야기들이 자연스럽게 시작됩니다. 그렇게 마음이 전달됩니다.",
+        "wordBreak": "keep-all",
+        "overflowWrap": "break-word",
+        "textAlign": "left",
+        "lineHeight": "32.4px"
+      },
+      "features": [
+        {
+          "text": "✓\n                            매일 아침 8시, 부모님과 같은 질문 받기",
+          "wordBreak": "keep-all",
+          "overflowWrap": "break-word",
+          "textAlign": "left",
+          "lineHeight": "24px"
+        },
+        {
+          "text": "✓\n                            서로 답하면 자동으로 공개되는 시스템",
+          "wordBreak": "keep-all",
+          "overflowWrap": "break-word",
+          "textAlign": "left",
+          "lineHeight": "24px"
+        },
+        {
+          "text": "✓\n                            대화 주제 고민 없이 자연스러운 소통",
+          "wordBreak": "keep-all",
+          "overflowWrap": "break-word",
+          "textAlign": "left",
+          "lineHeight": "24px"
+        },
+        {
+          "text": "✓\n                            가족만의 소중한 일상 기록 보관",
+          "wordBreak": "keep-all",
+          "overflowWrap": "break-word",
+          "textAlign": "left",
+          "lineHeight": "24px"
+        }
+      ]
+    },
+    "kakaoLinks": [
+      {
+        "href": "https://open.kakao.com/o/sUHoGvzf",
+        "text": "문의하기",
+        "target": "_blank",
+        "isVisible": false
+      },
+      {
+        "href": "https://open.kakao.com/o/sUHoGvzf",
+        "text": "문의하기 →",
+        "target": "_blank",
+        "isVisible": true
+      },
+      {
+        "href": "https://open.kakao.com/o/sUHoGvzf",
+        "text": "💬",
+        "target": "_blank",
+        "isVisible": true
+      },
+      {
+        "href": "https://open.kakao.com/o/sUHoGvzf",
+        "text": "문의하기",
+        "target": "_blank",
+        "isVisible": true
+      }
+    ],
+    "mobileNav": {
+      "mobileToggleVisible": true,
+      "navMenuHidden": true,
+      "mobileOptimized": true
+    },
+    "readability": {
+      "totalElements": 22,
+      "koreanOptimizedElements": 22,
+      "optimizationRate": "100.0"
+    },
+    "screenshots": {
+      "fullPage": "C:\\Users\\btsoft\\Desktop\\personal\\vibe-cording\\maum-baedal\\mobile-test-screenshots\\iPhone_SE_full_page.png",
+      "hero": "C:\\Users\\btsoft\\Desktop\\personal\\vibe-cording\\maum-baedal\\mobile-test-screenshots\\iPhone_SE_hero_section.png",
+      "problems": "C:\\Users\\btsoft\\Desktop\\personal\\vibe-cording\\maum-baedal\\mobile-test-screenshots\\iPhone_SE_problems_section.png",
+      "solutions": "C:\\Users\\btsoft\\Desktop\\personal\\vibe-cording\\maum-baedal\\mobile-test-screenshots\\iPhone_SE_solutions_section.png"
+    }
+  },
+  {
+    "device": "iPhone 12",
+    "viewport": "390x844",
+    "heroText": {
+      "subtitle": {
+        "text": "사람들이 느끼지만, 말하지 않는",
+        "width": 334.66668701171875,
+        "height": 78.39583587646484,
+        "lineHeight": "39.2px",
+        "wordBreak": "keep-all",
+        "overflowWrap": "break-word",
+        "lineBreak": "strict",
+        "fontSize": "28px",
+        "lines": 2
+      },
+      "main": {
+        "text": "불편함을 정의하는 기획자",
+        "width": 334.66668701171875,
+        "height": 100.79167175292969,
+        "lineHeight": "50.4px",
+        "wordBreak": "keep-all",
+        "overflowWrap": "break-word",
+        "lineBreak": "strict",
+        "fontSize": "36px",
+        "lines": 2
+      },
+      "description": {
+        "text": "일상 속 작은 불편함에서 시작해\n                세상을 조금 더 따뜻하게 만드는 서비스를 만듭니다",
+        "width": 334.66668701171875,
+        "height": 102,
+        "lineHeight": "34px",
+        "wordBreak": "keep-all",
+        "overflowWrap": "break-word",
+        "lineBreak": "auto",
+        "fontSize": "20px",
+        "lines": 3
+      }
+    },
+    "problemText": [
+      {
+        "index": 0,
+        "title": {
+          "text": "\"효도하고 싶지만 어떻게 해야 할지 모르겠어요\"...",
+          "wordBreak": "keep-all",
+          "overflowWrap": "break-word",
+          "textAlign": "start",
+          "lineHeight": "42px"
+        },
+        "description": {
+          "text": "부모님께 안부 전화를 드리고 싶은 마음은 간절하지만, 막상 전화를 걸면 \"안녕하세요\" 다음에 무슨 말을 해야 할지 막막합니다.\n                        우리는 분...",
+          "wordBreak": "keep-all",
+          "overflowWrap": "break-word",
+          "textAlign": "left",
+          "lineHeight": "28.8px"
+        }
+      },
+      {
+        "index": 1,
+        "title": {
+          "text": "\"언젠가 함께 하자고 하는데 언제인지 모르겠어요\"...",
+          "wordBreak": "keep-all",
+          "overflowWrap": "break-word",
+          "textAlign": "start",
+          "lineHeight": "42px"
+        },
+        "description": {
+          "text": "사랑하는 사람과 함께 하고 싶은 것들을 노트에 적어보지만, 시간이 지나고 보면 그대로 말이죠. '언젠가 해야지'라는 말이 '언제인지 모르겠어'로 바뀍니다.\n             ...",
+          "wordBreak": "keep-all",
+          "overflowWrap": "break-word",
+          "textAlign": "left",
+          "lineHeight": "28.8px"
+        }
+      }
+    ],
+    "solutionText": {
+      "description": {
+        "text": "매일 아침, 부모님과 나에게 같은 질문이 도착합니다.\n                        \"오늘 가장 기분 좋았던 순간은?\" 같은 따뜻한 질문에 서로 답하면,\n                        듣고 싶었던 이야기들이 자연스럽게 시작됩니다. 그렇게 마음이 전달됩니다.",
+        "wordBreak": "keep-all",
+        "overflowWrap": "break-word",
+        "textAlign": "left",
+        "lineHeight": "32.4px"
+      },
+      "features": [
+        {
+          "text": "✓\n                            매일 아침 8시, 부모님과 같은 질문 받기",
+          "wordBreak": "keep-all",
+          "overflowWrap": "break-word",
+          "textAlign": "left",
+          "lineHeight": "24px"
+        },
+        {
+          "text": "✓\n                            서로 답하면 자동으로 공개되는 시스템",
+          "wordBreak": "keep-all",
+          "overflowWrap": "break-word",
+          "textAlign": "left",
+          "lineHeight": "24px"
+        },
+        {
+          "text": "✓\n                            대화 주제 고민 없이 자연스러운 소통",
+          "wordBreak": "keep-all",
+          "overflowWrap": "break-word",
+          "textAlign": "left",
+          "lineHeight": "24px"
+        },
+        {
+          "text": "✓\n                            가족만의 소중한 일상 기록 보관",
+          "wordBreak": "keep-all",
+          "overflowWrap": "break-word",
+          "textAlign": "left",
+          "lineHeight": "24px"
+        }
+      ]
+    },
+    "kakaoLinks": [
+      {
+        "href": "https://open.kakao.com/o/sUHoGvzf",
+        "text": "문의하기",
+        "target": "_blank",
+        "isVisible": false
+      },
+      {
+        "href": "https://open.kakao.com/o/sUHoGvzf",
+        "text": "문의하기 →",
+        "target": "_blank",
+        "isVisible": true
+      },
+      {
+        "href": "https://open.kakao.com/o/sUHoGvzf",
+        "text": "💬",
+        "target": "_blank",
+        "isVisible": true
+      },
+      {
+        "href": "https://open.kakao.com/o/sUHoGvzf",
+        "text": "문의하기",
+        "target": "_blank",
+        "isVisible": true
+      }
+    ],
+    "mobileNav": {
+      "mobileToggleVisible": true,
+      "navMenuHidden": true,
+      "mobileOptimized": true
+    },
+    "readability": {
+      "totalElements": 22,
+      "koreanOptimizedElements": 22,
+      "optimizationRate": "100.0"
+    },
+    "screenshots": {
+      "fullPage": "C:\\Users\\btsoft\\Desktop\\personal\\vibe-cording\\maum-baedal\\mobile-test-screenshots\\iPhone_12_full_page.png",
+      "hero": "C:\\Users\\btsoft\\Desktop\\personal\\vibe-cording\\maum-baedal\\mobile-test-screenshots\\iPhone_12_hero_section.png",
+      "problems": "C:\\Users\\btsoft\\Desktop\\personal\\vibe-cording\\maum-baedal\\mobile-test-screenshots\\iPhone_12_problems_section.png",
+      "solutions": "C:\\Users\\btsoft\\Desktop\\personal\\vibe-cording\\maum-baedal\\mobile-test-screenshots\\iPhone_12_solutions_section.png"
+    }
+  },
+  {
+    "device": "Galaxy S21",
+    "viewport": "360x800",
+    "heroText": {
+      "subtitle": {
+        "text": "사람들이 느끼지만, 말하지 않는",
+        "width": 304.66668701171875,
+        "height": 78.39583587646484,
+        "lineHeight": "39.2px",
+        "wordBreak": "keep-all",
+        "overflowWrap": "break-word",
+        "lineBreak": "strict",
+        "fontSize": "28px",
+        "lines": 2
+      },
+      "main": {
+        "text": "불편함을 정의하는 기획자",
+        "width": 304.66668701171875,
+        "height": 100.79167175292969,
+        "lineHeight": "50.4px",
+        "wordBreak": "keep-all",
+        "overflowWrap": "break-word",
+        "lineBreak": "strict",
+        "fontSize": "36px",
+        "lines": 2
+      },
+      "description": {
+        "text": "일상 속 작은 불편함에서 시작해\n                세상을 조금 더 따뜻하게 만드는 서비스를 만듭니다",
+        "width": 304.66668701171875,
+        "height": 102,
+        "lineHeight": "34px",
+        "wordBreak": "keep-all",
+        "overflowWrap": "break-word",
+        "lineBreak": "auto",
+        "fontSize": "20px",
+        "lines": 3
+      }
+    },
+    "problemText": [
+      {
+        "index": 0,
+        "title": {
+          "text": "\"효도하고 싶지만 어떻게 해야 할지 모르겠어요\"...",
+          "wordBreak": "keep-all",
+          "overflowWrap": "break-word",
+          "textAlign": "start",
+          "lineHeight": "42px"
+        },
+        "description": {
+          "text": "부모님께 안부 전화를 드리고 싶은 마음은 간절하지만, 막상 전화를 걸면 \"안녕하세요\" 다음에 무슨 말을 해야 할지 막막합니다.\n                        우리는 분...",
+          "wordBreak": "keep-all",
+          "overflowWrap": "break-word",
+          "textAlign": "left",
+          "lineHeight": "28.8px"
+        }
+      },
+      {
+        "index": 1,
+        "title": {
+          "text": "\"언젠가 함께 하자고 하는데 언제인지 모르겠어요\"...",
+          "wordBreak": "keep-all",
+          "overflowWrap": "break-word",
+          "textAlign": "start",
+          "lineHeight": "42px"
+        },
+        "description": {
+          "text": "사랑하는 사람과 함께 하고 싶은 것들을 노트에 적어보지만, 시간이 지나고 보면 그대로 말이죠. '언젠가 해야지'라는 말이 '언제인지 모르겠어'로 바뀍니다.\n             ...",
+          "wordBreak": "keep-all",
+          "overflowWrap": "break-word",
+          "textAlign": "left",
+          "lineHeight": "28.8px"
+        }
+      }
+    ],
+    "solutionText": {
+      "description": {
+        "text": "매일 아침, 부모님과 나에게 같은 질문이 도착합니다.\n                        \"오늘 가장 기분 좋았던 순간은?\" 같은 따뜻한 질문에 서로 답하면,\n                        듣고 싶었던 이야기들이 자연스럽게 시작됩니다. 그렇게 마음이 전달됩니다.",
+        "wordBreak": "keep-all",
+        "overflowWrap": "break-word",
+        "textAlign": "left",
+        "lineHeight": "32.4px"
+      },
+      "features": [
+        {
+          "text": "✓\n                            매일 아침 8시, 부모님과 같은 질문 받기",
+          "wordBreak": "keep-all",
+          "overflowWrap": "break-word",
+          "textAlign": "left",
+          "lineHeight": "24px"
+        },
+        {
+          "text": "✓\n                            서로 답하면 자동으로 공개되는 시스템",
+          "wordBreak": "keep-all",
+          "overflowWrap": "break-word",
+          "textAlign": "left",
+          "lineHeight": "24px"
+        },
+        {
+          "text": "✓\n                            대화 주제 고민 없이 자연스러운 소통",
+          "wordBreak": "keep-all",
+          "overflowWrap": "break-word",
+          "textAlign": "left",
+          "lineHeight": "24px"
+        },
+        {
+          "text": "✓\n                            가족만의 소중한 일상 기록 보관",
+          "wordBreak": "keep-all",
+          "overflowWrap": "break-word",
+          "textAlign": "left",
+          "lineHeight": "24px"
+        }
+      ]
+    },
+    "kakaoLinks": [
+      {
+        "href": "https://open.kakao.com/o/sUHoGvzf",
+        "text": "문의하기",
+        "target": "_blank",
+        "isVisible": false
+      },
+      {
+        "href": "https://open.kakao.com/o/sUHoGvzf",
+        "text": "문의하기 →",
+        "target": "_blank",
+        "isVisible": true
+      },
+      {
+        "href": "https://open.kakao.com/o/sUHoGvzf",
+        "text": "💬",
+        "target": "_blank",
+        "isVisible": true
+      },
+      {
+        "href": "https://open.kakao.com/o/sUHoGvzf",
+        "text": "문의하기",
+        "target": "_blank",
+        "isVisible": true
+      }
+    ],
+    "mobileNav": {
+      "mobileToggleVisible": true,
+      "navMenuHidden": true,
+      "mobileOptimized": true
+    },
+    "readability": {
+      "totalElements": 22,
+      "koreanOptimizedElements": 22,
+      "optimizationRate": "100.0"
+    },
+    "screenshots": {
+      "fullPage": "C:\\Users\\btsoft\\Desktop\\personal\\vibe-cording\\maum-baedal\\mobile-test-screenshots\\Galaxy_S21_full_page.png",
+      "hero": "C:\\Users\\btsoft\\Desktop\\personal\\vibe-cording\\maum-baedal\\mobile-test-screenshots\\Galaxy_S21_hero_section.png",
+      "problems": "C:\\Users\\btsoft\\Desktop\\personal\\vibe-cording\\maum-baedal\\mobile-test-screenshots\\Galaxy_S21_problems_section.png",
+      "solutions": "C:\\Users\\btsoft\\Desktop\\personal\\vibe-cording\\maum-baedal\\mobile-test-screenshots\\Galaxy_S21_solutions_section.png"
+    }
+  },
+  {
+    "device": "iPad Mini",
+    "viewport": "768x1024",
+    "heroText": {
+      "subtitle": {
+        "text": "사람들이 느끼지만, 말하지 않는",
+        "width": 588.0104370117188,
+        "height": 53.75,
+        "lineHeight": "53.76px",
+        "wordBreak": "keep-all",
+        "overflowWrap": "break-word",
+        "lineBreak": "strict",
+        "fontSize": "38.4px",
+        "lines": 1
+      },
+      "main": {
+        "text": "불편함을 정의하는 기획자",
+        "width": 588.0104370117188,
+        "height": 75.26042175292969,
+        "lineHeight": "75.264px",
+        "wordBreak": "keep-all",
+        "overflowWrap": "break-word",
+        "lineBreak": "strict",
+        "fontSize": "53.76px",
+        "lines": 1
+      },
+      "description": {
+        "text": "일상 속 작은 불편함에서 시작해\n                세상을 조금 더 따뜻하게 만드는 서비스를 만듭니다",
+        "width": 588.0104370117188,
+        "height": 78.33333587646484,
+        "lineHeight": "39.168px",
+        "wordBreak": "keep-all",
+        "overflowWrap": "break-word",
+        "lineBreak": "auto",
+        "fontSize": "23.04px",
+        "lines": 2
+      }
+    },
+    "problemText": [
+      {
+        "index": 0,
+        "title": {
+          "text": "\"효도하고 싶지만 어떻게 해야 할지 모르겠어요\"...",
+          "wordBreak": "keep-all",
+          "overflowWrap": "break-word",
+          "textAlign": "start",
+          "lineHeight": "42px"
+        },
+        "description": {
+          "text": "부모님께 안부 전화를 드리고 싶은 마음은 간절하지만, 막상 전화를 걸면 \"안녕하세요\" 다음에 무슨 말을 해야 할지 막막합니다.\n                        우리는 분...",
+          "wordBreak": "keep-all",
+          "overflowWrap": "break-word",
+          "textAlign": "left",
+          "lineHeight": "28.8px"
+        }
+      },
+      {
+        "index": 1,
+        "title": {
+          "text": "\"언젠가 함께 하자고 하는데 언제인지 모르겠어요\"...",
+          "wordBreak": "keep-all",
+          "overflowWrap": "break-word",
+          "textAlign": "start",
+          "lineHeight": "42px"
+        },
+        "description": {
+          "text": "사랑하는 사람과 함께 하고 싶은 것들을 노트에 적어보지만, 시간이 지나고 보면 그대로 말이죠. '언젠가 해야지'라는 말이 '언제인지 모르겠어'로 바뀍니다.\n             ...",
+          "wordBreak": "keep-all",
+          "overflowWrap": "break-word",
+          "textAlign": "left",
+          "lineHeight": "28.8px"
+        }
+      }
+    ],
+    "solutionText": {
+      "description": {
+        "text": "매일 아침, 부모님과 나에게 같은 질문이 도착합니다.\n                        \"오늘 가장 기분 좋았던 순간은?\" 같은 따뜻한 질문에 서로 답하면,\n                        듣고 싶었던 이야기들이 자연스럽게 시작됩니다. 그렇게 마음이 전달됩니다.",
+        "wordBreak": "keep-all",
+        "overflowWrap": "break-word",
+        "textAlign": "left",
+        "lineHeight": "32.4px"
+      },
+      "features": [
+        {
+          "text": "✓\n                            매일 아침 8시, 부모님과 같은 질문 받기",
+          "wordBreak": "keep-all",
+          "overflowWrap": "break-word",
+          "textAlign": "left",
+          "lineHeight": "24px"
+        },
+        {
+          "text": "✓\n                            서로 답하면 자동으로 공개되는 시스템",
+          "wordBreak": "keep-all",
+          "overflowWrap": "break-word",
+          "textAlign": "left",
+          "lineHeight": "24px"
+        },
+        {
+          "text": "✓\n                            대화 주제 고민 없이 자연스러운 소통",
+          "wordBreak": "keep-all",
+          "overflowWrap": "break-word",
+          "textAlign": "left",
+          "lineHeight": "24px"
+        },
+        {
+          "text": "✓\n                            가족만의 소중한 일상 기록 보관",
+          "wordBreak": "keep-all",
+          "overflowWrap": "break-word",
+          "textAlign": "left",
+          "lineHeight": "24px"
+        }
+      ]
+    },
+    "kakaoLinks": [
+      {
+        "href": "https://open.kakao.com/o/sUHoGvzf",
+        "text": "문의하기",
+        "target": "_blank",
+        "isVisible": false
+      },
+      {
+        "href": "https://open.kakao.com/o/sUHoGvzf",
+        "text": "문의하기 →",
+        "target": "_blank",
+        "isVisible": true
+      },
+      {
+        "href": "https://open.kakao.com/o/sUHoGvzf",
+        "text": "💬",
+        "target": "_blank",
+        "isVisible": true
+      },
+      {
+        "href": "https://open.kakao.com/o/sUHoGvzf",
+        "text": "문의하기",
+        "target": "_blank",
+        "isVisible": true
+      }
+    ],
+    "mobileNav": {
+      "mobileToggleVisible": true,
+      "navMenuHidden": true,
+      "mobileOptimized": true
+    },
+    "readability": {
+      "totalElements": 22,
+      "koreanOptimizedElements": 22,
+      "optimizationRate": "100.0"
+    },
+    "screenshots": {
+      "fullPage": "C:\\Users\\btsoft\\Desktop\\personal\\vibe-cording\\maum-baedal\\mobile-test-screenshots\\iPad_Mini_full_page.png",
+      "hero": "C:\\Users\\btsoft\\Desktop\\personal\\vibe-cording\\maum-baedal\\mobile-test-screenshots\\iPad_Mini_hero_section.png",
+      "problems": "C:\\Users\\btsoft\\Desktop\\personal\\vibe-cording\\maum-baedal\\mobile-test-screenshots\\iPad_Mini_problems_section.png",
+      "solutions": "C:\\Users\\btsoft\\Desktop\\personal\\vibe-cording\\maum-baedal\\mobile-test-screenshots\\iPad_Mini_solutions_section.png"
+    }
+  }
+]

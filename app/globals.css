@@ -3,24 +3,292 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  
+  /* 마음배달 브랜드 컬러 시스템 - 간소화 */
+  /* Primary: 따뜻하고 부드러운 피치 */
+  --primary: #FB923C;  /* 메인 피치 오렌지 (기존 orange-400) */
+  --primary-light: #FED7AA;  /* 연한 피치 */
+  --primary-dark: #F97316;  /* 강조용 */
+  
+  /* Secondary: 부드러운 라벤더 */
+  --secondary: #C4B5FD;  /* 메인 라벤더 (기존 violet-300) */
+  --secondary-light: #E8D5FF;  /* 연한 라벤더 */
+  --secondary-dark: #A78BFA;  /* 강조용 */
+  
+  /* 기존 호환성을 위한 별칭 (점진적 마이그레이션) */
+  --primary-orange-600: #EA580C;
+  --primary-orange-500: #F97316;
+  --primary-orange-400: #FB923C;
+  --primary-orange-300: #FDBA74;
+  --primary-orange-200: #FED7AA;
+  --primary-orange-100: #FFEDD5;
+  --primary-orange-50: #FFF7ED;
+  
+  --secondary-violet-600: #7C3AED;
+  --secondary-violet-500: #7C5CE4;
+  --secondary-violet-400: #A78BFA;
+  --secondary-violet-300: #C4B5FD;
+  --secondary-violet-200: #DDD6FE;
+  --secondary-violet-100: #E8D5FF;
+  --secondary-violet-50: #FAF5FF;
+  
+  /* 그레이 시스템 */
+  --gray-50: #F8FAFC;
+  --gray-100: #F1F5F9;
+  --gray-200: #E2E8F0;
+  --gray-300: #CBD5E1;
+  --gray-400: #94A3B8;
+  --gray-500: #64748B;
+  --gray-600: #475569;
+  --gray-700: #334155;
+  --gray-800: #1E293B;
+  --gray-900: #0F172A;
+  
+  /* 상태 색상 - 부드러운 톤 */
+  --success: #10B981;  /* 그린 유지 */
+  --warning: #FBBF24;  /* 더 부드러운 옐로우 */
+  --error: #F87171;  /* 더 부드러운 레드 */
+  --info: #60A5FA;  /* 더 부드러운 블루 */
+  
+  /* shadcn/ui 호환 색상 시스템 */
+  --primary-shadcn: #FB923C;  /* 부드러운 피치 오렌지 */
+  --primary-foreground: #ffffff;
+  --secondary: #f1f5f9;
+  --secondary-foreground: #0f172a;
+  --accent: #f1f5f9;
+  --accent-foreground: #0f172a;
+  --destructive: #ef4444;
+  --destructive-foreground: #fef2f2;
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #A78BFA;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --popover: #ffffff;
+  --popover-foreground: #0f172a;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+}
+
+/* 터치 타겟 - 44px 이상 확보 */
+.touch-target {
+  min-width: 44px;
+  min-height: 44px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --card: #0a0a0a;
+    --card-foreground: #ededed;
+    --popover: #0a0a0a;
+    --popover-foreground: #ededed;
+    --primary: #F97316;
+    --primary-foreground: #0a0a0a;
+    --secondary: #262626;
+    --secondary-foreground: #fafafa;
+    --muted: #262626;
+    --muted-foreground: #a1a1aa;
+    --accent: #262626;
+    --accent-foreground: #fafafa;
+    --destructive: #dc2626;
+    --destructive-foreground: #fafafa;
+    --border: #262626;
+    --input: #262626;
+    --ring: #A78BFA;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+/* 마음배달 전용 유틸리티 클래스 */
+/* 마음배달 유틸리티 클래스 - 간소화 */
+.text-primary {
+  color: var(--primary);
+}
+
+.text-secondary {
+  color: var(--secondary);
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.bg-secondary {
+  background-color: var(--secondary);
+}
+
+.border-primary {
+  border-color: var(--primary);
+}
+
+/* 기존 클래스 호환성 유지 */
+.text-maum-orange {
+  color: var(--primary);
+}
+
+.text-maum-orange-light {
+  color: var(--primary-light);
+}
+
+.text-maum-violet {
+  color: var(--secondary);
+}
+
+.bg-maum-orange {
+  background-color: var(--primary);
+}
+
+.bg-maum-orange-light {
+  background-color: var(--primary-light);
+}
+
+.bg-maum-violet {
+  background-color: var(--secondary);
+}
+
+.border-maum-orange {
+  border-color: var(--primary);
+}
+
+/* 접근성을 위한 포커스 스타일 */
+.focus-visible\:ring-maum:focus-visible {
+  --tw-ring-color: var(--secondary-violet-600);
+}
+
+/* 터치 디바이스를 위한 최소 터치 타겟 보장 */
+.touch-target {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* 색상 팔레트 강제 색상 표시 */
+.color-swatch-override {
+  background-color: var(--swatch-color) !important;
+  background: var(--swatch-color) !important;
+  background-image: none !important;
+}
+
+.color-swatch-override * {
+  background: transparent !important;
+}
+
+/* 그라디언트 팔레트 강제 표시 */
+.gradient-swatch-override {
+  background: var(--swatch-gradient) !important;
+  background-color: transparent !important;
+}
+
+/* 스크린 리더 전용 텍스트 */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* 포커스 시에만 표시 */
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+  background-color: var(--secondary-violet-600);
+  color: white;
+  border-radius: 0.5rem;
+  z-index: 50;
+}
+
+/* 고대비 지원 */
+@media (prefers-contrast: high) {
+  .text-gray-600 {
+    color: var(--gray-800) !important;
+  }
+  .text-gray-500 {
+    color: var(--gray-700) !important;
+  }
+  .border-gray-200 {
+    border-color: var(--gray-400) !important;
+  }
+}
+
+/* 움직임 감소 설정 지원 */
+@media (prefers-reduced-motion: reduce) {
+  .transition-all,
+  .transition-transform,
+  .transition-colors,
+  .animate-spin,
+  .animate-pulse {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* 터치 피드백 강화 */
+.touch-target:active {
+  transform: scale(0.98);
+  transition: transform 0.1s ease;
+}
+
+/* 스크롤바 숨기기 */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+
+/* 모바일에서 호버 효과 제거 */
+@media (hover: none) {
+  .hover\:scale-105:hover {
+    transform: none !important;
+  }
+  .hover\:bg-orange-50:hover,
+  .hover\:bg-violet-50:hover,
+  .hover\:bg-yellow-100:hover,
+  .hover\:bg-blue-100:hover {
+    background-color: inherit !important;
+  }
 }

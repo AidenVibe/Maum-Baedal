@@ -1,32 +1,37 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import { MobileBottomNavigation } from "@/components/navigation/MobileBottomNavigation";
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
+import { MobileBottomNavigation } from '@/components/navigation/MobileBottomNavigation'
+import SessionProviderWrapper from '@/components/auth/SessionProviderWrapper'
+import { KakaoProvider } from '@/components/providers/KakaoProvider'
+import { ErrorSuppressor } from '@/components/providers/ErrorSuppressor'
+import { ToastProvider, ToastContainer } from '@/components/ui/toast'
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: "마음배달 v2 - 매일 한 질문으로 가족과 따뜻하게 연결됩니다",
-  description: "한국 가족을 위한 일일 대화 플랫폼. 게이트 공개 시스템을 통해 진정성 있는 가족 간 대화를 촉진합니다.",
-};
+  title: '마음배달 - 매일 한 질문으로 마음을 나눠요',
+  description: '공평한 공개 방식으로 가족과 진솔한 대화를 나누는 일상 질문 서비스',
+}
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ko">
       <body className={inter.className}>
-        <div className="flex flex-col min-h-screen">
-          {/* 메인 콘텐츠 영역 - 하단 네비게이션 공간 확보 */}
-          <main className="flex-1 pb-16">
-            {children}
-          </main>
-          {/* 전역 하단 네비게이션 */}
-          <MobileBottomNavigation />
-        </div>
+        <ErrorSuppressor />
+        <SessionProviderWrapper>
+          <KakaoProvider>
+            <ToastProvider>
+              <div className="flex flex-col min-h-screen">
+                <main className="flex-1 pb-16">{children}</main>
+                <MobileBottomNavigation />
+              </div>
+              <ToastContainer />
+            </ToastProvider>
+          </KakaoProvider>
+        </SessionProviderWrapper>
       </body>
     </html>
-  );
+  )
 }
+
